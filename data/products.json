@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": "gift-card",
+      "slug": "gift-card",
+      "name": "Goggins Gift Card",
+      "price": 25,
+      "minPrice": 25,
+      "description": "The perfect gift for any occasion. Gift cards can be used for food, drinks, and merchandise.",
+      "image": "/images/products/gift-card.jpg"
+    },
+    {
+      "id": "tshirt-green",
+      "slug": "tshirt-green",
+      "name": "Goggins T-Shirt (Green)",
+      "price": 25,
+      "description": "Premium cotton t-shirt featuring the Goggins of Monkstown logo in classic green.",
+      "image": "/images/products/tshirt-green.jpg",
+      "sizes": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": "cap",
+      "slug": "cap",
+      "name": "Goggins Cap",
+      "price": 20,
+      "description": "Stylish cap with embroidered Goggins logo. Perfect for sunny days by the coast.",
+      "image": "/images/products/cap.jpg"
+    },
+    {
+      "id": "whiskey",
+      "slug": "whiskey",
+      "name": "Goggins Whiskey (House Select)",
+      "price": 70,
+      "description": "A carefully selected Irish whiskey, bottled exclusively for Goggins of Monkstown.",
+      "image": "/images/products/whiskey.jpg"
+    }
+  ]
+}
+

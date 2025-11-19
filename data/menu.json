@@ -1,0 +1,45 @@
+{
+  "sections": [
+    {
+      "name": "Pub Classics",
+      "items": [
+        {
+          "name": "Toasted Special",
+          "description": "A classic Irish toasted sandwich with ham, cheese, and tomato, served with chips.",
+          "price": "€8.50"
+        },
+        {
+          "name": "Wings",
+          "description": "Crispy chicken wings served with your choice of sauce - buffalo, BBQ, or honey mustard.",
+          "price": "€9.50"
+        },
+        {
+          "name": "Fish & Chips",
+          "description": "Fresh cod in golden batter, served with hand-cut chips, mushy peas, and tartar sauce.",
+          "price": "€16.50"
+        },
+        {
+          "name": "Beef Burger",
+          "description": "Premium Irish beef patty with lettuce, tomato, onion, and special sauce, served with chips.",
+          "price": "€14.50"
+        }
+      ]
+    },
+    {
+      "name": "Snacks",
+      "items": [
+        {
+          "name": "Crisps",
+          "description": "Selection of Irish crisps - Tayto, King, or imported favourites.",
+          "price": "€2.50"
+        },
+        {
+          "name": "Nuts",
+          "description": "Roasted peanuts and mixed nuts, perfect with a pint.",
+          "price": "€3.50"
+        }
+      ]
+    }
+  ]
+}
+
