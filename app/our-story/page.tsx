@@ -73,7 +73,7 @@ export default function OurStory() {
                     2000s
                   </h3>
                   <p className="text-pub-wood-700">
-                    Renovations retaining original features, preserving the pub's character 
+                    Renovations retaining original features, preserving the pub&apos;s character 
                     while modernising facilities.
                   </p>
                 </div>
