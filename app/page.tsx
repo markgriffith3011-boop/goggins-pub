@@ -6,11 +6,10 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative h-[600px] md:h-[700px] flex items-center justify-center">
-        {/* TODO: Replace with actual hero image */}
         <div className="absolute inset-0 bg-gradient-to-r from-pub-green-900 to-pub-green-700">
           <Image
-            src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80"
-            alt="Goggins of Monkstown exterior"
+            src="/images/hero-interior.jpg"
+            alt="Goggins of Monkstown interior - elegant pub with teal walls, banquette seating, and warm lighting"
             fill
             className="object-cover opacity-60"
             priority
