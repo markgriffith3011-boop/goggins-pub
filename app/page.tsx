@@ -50,6 +50,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Interior Showcase */}
+      <section className="relative h-[350px] md:h-[450px] overflow-hidden">
+        <Image
+          src="/images/goggins-interior.jpg"
+          alt="Goggins of Monkstown interior — leather booths, herringbone floors and warm ambient lighting"
+          fill
+          className="object-cover object-center"
+        />
+      </section>
+
       {/* Highlights Strip */}
       <section className="section-padding bg-pub-cream-100">
         <div className="container-custom">
