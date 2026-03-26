@@ -8,8 +8,8 @@ export default function Home() {
       <section className="relative h-[600px] md:h-[700px] flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-r from-pub-green-900 to-pub-green-700">
           <Image
-            src="/images/hero-interior.jpg"
-            alt="Goggins of Monkstown interior - elegant pub with teal walls, banquette seating, and warm lighting"
+            src="/images/goggins-storefront.jpg"
+            alt="Goggins of Monkstown — classic navy facade with gold lettering on Monkstown Road"
             fill
             className="object-cover opacity-60"
             priority
