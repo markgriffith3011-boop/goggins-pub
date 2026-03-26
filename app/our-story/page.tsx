@@ -47,7 +47,7 @@ export default function OurStory() {
                     1935
                   </h3>
                   <p className="text-pub-wood-700">
-                    Goggins opens on Monkstown Crescent, establishing itself as a local 
+                    Goggins opens on Monkstown Road, establishing itself as a local 
                     meeting place in the heart of the community.
                   </p>
                 </div>

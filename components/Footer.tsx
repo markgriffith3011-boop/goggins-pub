@@ -3,7 +3,7 @@ import hoursData from '@/data/hours.json'
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: '📘' },
-  { name: 'Instagram', href: '#', icon: '📷' },
+  { name: 'Instagram', href: 'https://www.instagram.com/gogginspub', icon: '📷' },
 ]
 
 const formatHours = () => {
@@ -28,9 +28,9 @@ export default function Footer() {
           <div>
             <h3 className="font-serif text-xl font-bold text-white mb-4">Visit Us</h3>
             <address className="not-italic text-pub-cream-200 space-y-2">
-              <p>1–4 Monkstown Crescent</p>
-              <p>Monkstown, Co. Dublin</p>
-              <p>Ireland</p>
+              <p>99 Monkstown Rd</p>
+              <p>Dún Laoghaire, Dublin</p>
+              <p>A94 Y8D8, Ireland</p>
               <p className="mt-4">
                 <a href="tel:+353-1-XXX-XXXX" className="hover:text-white transition-colors">
                   {/* TODO: Replace with actual phone number */}

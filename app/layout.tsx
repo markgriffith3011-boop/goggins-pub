@@ -66,9 +66,10 @@ export default function RootLayout({
               telephone: '+353-1-XXX-XXXX',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: '1–4 Monkstown Crescent',
-                addressLocality: 'Monkstown',
-                addressRegion: 'Co. Dublin',
+                streetAddress: '99 Monkstown Rd',
+                addressLocality: 'Dún Laoghaire',
+                addressRegion: 'Dublin',
+                postalCode: 'A94 Y8D8',
                 addressCountry: 'IE',
               },
               geo: {

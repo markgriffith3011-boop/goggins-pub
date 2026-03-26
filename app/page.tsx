@@ -69,7 +69,7 @@ export default function Home() {
                 Coastal Location
               </h3>
               <p className="text-pub-wood-700 text-sm">
-                Overlooking Monkstown Crescent & the Dublin Bay coastline.
+                Overlooking Monkstown Road & the Dublin Bay coastline.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">

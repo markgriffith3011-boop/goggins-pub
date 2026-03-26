@@ -81,9 +81,9 @@ export default function ContactForm() {
               <div>
                 <h3 className="font-semibold text-pub-wood-800 mb-2">Address</h3>
                 <address className="not-italic text-pub-wood-700">
-                  1–4 Monkstown Crescent<br />
-                  Monkstown, Co. Dublin<br />
-                  Ireland
+                  99 Monkstown Rd<br />
+                  Dún Laoghaire, Dublin<br />
+                  A94 Y8D8, Ireland
                 </address>
               </div>
               <div>

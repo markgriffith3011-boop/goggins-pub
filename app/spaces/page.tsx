@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const spaces = [
   {
     name: 'Front Bar',
-    description: 'Warm wood, classic snugs and natural daylight overlooking Monkstown Crescent. Perfect for casual drinks and walk-ins.',
+    description: 'Warm wood, classic snugs and natural daylight overlooking Monkstown Road. Perfect for casual drinks and walk-ins.',
     capacity: null,
     image: '🍺',
   },

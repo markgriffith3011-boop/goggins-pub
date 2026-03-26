@@ -12,7 +12,7 @@ const galleryImages = [
   { id: 5, src: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&q=80', alt: 'Whiskey selection' },
   { id: 6, src: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80', alt: 'Pub atmosphere' },
   { id: 7, src: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80', alt: 'Traditional decor' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80', alt: 'Monkstown Crescent' },
+  { id: 8, src: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80', alt: 'Monkstown Road' },
   { id: 9, src: 'https://images.unsplash.com/photo-1552569973-ffaac7400f87?w=800&q=80', alt: 'Snug area' },
   { id: 10, src: 'https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&q=80', alt: 'Function room' },
   { id: 11, src: 'https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=800&q=80', alt: 'Dublin Bay view' },
