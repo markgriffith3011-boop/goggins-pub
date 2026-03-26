@@ -12,7 +12,7 @@ export default function OurStory() {
       {/* Hero */}
       <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/hero-interior.jpg"
+          src="/images/goggins-storefront.jpg"
           alt="Goggins of Monkstown"
           fill
           className="object-cover object-center"
