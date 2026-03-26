@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[600px] md:h-[700px] flex items-center justify-center">
+      <section className="relative h-[600px] md:h-[700px] flex items-end justify-center pb-16 md:pb-24">
         <div className="absolute inset-0 bg-gradient-to-r from-pub-green-900 to-pub-green-700">
           <Image
             src="/images/goggins-storefront.jpg"
