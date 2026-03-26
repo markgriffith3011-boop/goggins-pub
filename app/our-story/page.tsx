@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Our Story | Goggins of Monkstown',
@@ -9,12 +10,20 @@ export default function OurStory() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="relative h-[400px] flex items-center justify-center bg-gradient-to-r from-pub-green-900 to-pub-green-700">
+      <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/images/hero-interior.jpg"
+          alt="Goggins of Monkstown"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
             A Pub with History
           </h1>
-          <p className="text-xl md:text-2xl text-pub-cream-100">
+          <p className="text-xl md:text-2xl text-pub-cream-100 drop-shadow-md">
             Since 1935
           </p>
         </div>

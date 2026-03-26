@@ -99,10 +99,10 @@ export default function ContactForm() {
               <div>
                 <h3 className="font-semibold text-pub-wood-800 mb-2">Email</h3>
                 <a
-                  href="mailto:info@gogginspub.ie"
+                  href="mailto:Gogginsandco@gmail.com"
                   className="text-pub-green-700 hover:text-pub-green-800"
                 >
-                  info@gogginspub.ie
+                  Gogginsandco@gmail.com
                 </a>
               </div>
               <div>

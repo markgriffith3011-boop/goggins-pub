@@ -38,8 +38,8 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <a href="mailto:info@gogginspub.ie" className="hover:text-white transition-colors">
-                  info@gogginspub.ie
+                <a href="mailto:Gogginsandco@gmail.com" className="hover:text-white transition-colors">
+                  Gogginsandco@gmail.com
                 </a>
               </p>
             </address>
