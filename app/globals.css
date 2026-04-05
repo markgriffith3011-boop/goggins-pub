@@ -6,31 +6,65 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-pub-cream-50 text-pub-wood-900;
+    @apply bg-white text-pub-green-700;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-pub-green-700;
+    font-weight: 500;
   }
 }
 
 @layer components {
+  /* Solid gold/taupe button — primary CTA */
   .btn-primary {
-    @apply bg-pub-green-700 text-white px-6 py-3 rounded-md font-medium hover:bg-pub-green-800 transition-colors duration-200;
+    @apply inline-block bg-pub-wood-500 text-white px-8 py-3 font-sans text-sm font-medium uppercase tracking-widest hover:bg-pub-wood-600 transition-colors duration-200;
   }
-  
-  .btn-secondary {
-    @apply bg-pub-wood-600 text-white px-6 py-3 rounded-md font-medium hover:bg-pub-wood-700 transition-colors duration-200;
+
+  /* White button with dark text — used on hero */
+  .btn-light {
+    @apply inline-block bg-white text-pub-green-700 px-8 py-3 font-sans text-sm font-medium uppercase tracking-widest hover:bg-pub-cream-100 transition-colors duration-200;
   }
-  
+
+  /* Gold outlined button — used on dark banners */
+  .btn-outline-gold {
+    @apply inline-block border border-pub-wood-500 text-pub-wood-500 px-8 py-3 font-sans text-sm font-medium uppercase tracking-widest hover:bg-pub-wood-500 hover:text-white transition-colors duration-200;
+  }
+
+  /* Navy outlined button */
   .btn-outline {
-    @apply border-2 border-pub-green-700 text-pub-green-700 px-6 py-3 rounded-md font-medium hover:bg-pub-green-700 hover:text-white transition-colors duration-200;
+    @apply inline-block border border-pub-green-700 text-pub-green-700 px-8 py-3 font-sans text-sm font-medium uppercase tracking-widest hover:bg-pub-green-700 hover:text-white transition-colors duration-200;
   }
-  
+
+  .btn-secondary {
+    @apply inline-block bg-pub-green-700 text-white px-8 py-3 font-sans text-sm font-medium uppercase tracking-widest hover:bg-pub-green-800 transition-colors duration-200;
+  }
+
+  .nav-link {
+    @apply font-sans text-xs font-normal uppercase tracking-widest text-pub-green-700 transition-colors duration-200;
+  }
+
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
   }
-  
+
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-}
 
+  /* Ornamental divider */
+  .ornament-divider {
+    @apply flex items-center justify-center my-6;
+  }
+  .ornament-divider::before,
+  .ornament-divider::after {
+    content: '';
+    @apply block h-px w-16 bg-pub-wood-300;
+  }
+  .ornament-divider > span {
+    @apply mx-4 text-pub-wood-500 text-xs tracking-widest uppercase;
+  }
+}
