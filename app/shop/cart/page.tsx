@@ -2,9 +2,11 @@
 
 import { useCart } from '@/lib/CartProvider'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, getTotal, clearCart } = useCart()
+  const router = useRouter()
 
   if (items.length === 0) {
     return (
