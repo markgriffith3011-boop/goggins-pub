@@ -13,7 +13,7 @@ const socialLinks = [
   },
   {
     name: 'Instagram',
-    href: '#',
+    href: 'https://www.instagram.com/gogginspub',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-5 h-5">
         <rect x="3" y="3" width="18" height="18" rx="4" />
@@ -46,8 +46,8 @@ export default function Footer() {
           <div>
             <h3 className="font-sans text-xs uppercase tracking-widest text-pub-wood-300 mb-5">Visit Us</h3>
             <address className="not-italic space-y-2 font-light">
-              <p>1–4 Monkstown Crescent</p>
-              <p>Monkstown, Co. Dublin</p>
+              <p>99 Monkstown Rd</p>
+              <p>Dún Laoghaire, Dublin, A94 Y8D8</p>
               <p>Ireland</p>
               <p className="mt-4">
                 <a href="tel:+353-1-XXX-XXXX" className="hover:text-white transition-colors">
@@ -55,8 +55,8 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <a href="mailto:info@gogginspub.ie" className="hover:text-white transition-colors">
-                  info@gogginspub.ie
+                <a href="mailto:gogginspub@gmail.com" className="hover:text-white transition-colors">
+                  gogginspub@gmail.com
                 </a>
               </p>
             </address>

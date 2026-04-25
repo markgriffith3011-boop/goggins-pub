@@ -82,8 +82,8 @@ export default function ContactForm() {
                 <h3 className="font-semibold text-pub-wood-800 mb-2">Address</h3>
                 <address className="not-italic text-pub-wood-700">
                   99 Monkstown Rd<br />
-                  Dún Laoghaire, Dublin<br />
-                  A94 Y8D8, Ireland
+                  Dún Laoghaire, Dublin, A94 Y8D8<br />
+                  Ireland
                 </address>
               </div>
               <div>
@@ -99,10 +99,10 @@ export default function ContactForm() {
               <div>
                 <h3 className="font-semibold text-pub-wood-800 mb-2">Email</h3>
                 <a
-                  href="mailto:Gogginsandco@gmail.com"
+                  href="mailto:gogginspub@gmail.com"
                   className="text-pub-green-700 hover:text-pub-green-800"
                 >
-                  Gogginsandco@gmail.com
+                  gogginspub@gmail.com
                 </a>
               </div>
               <div>
