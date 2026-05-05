@@ -3,25 +3,25 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Our Story | Goggins of Monkstown',
-  description: 'Some pubs are just places to drink. Goggins is a place to belong. The story of a third-generation family pub on Monkstown Road since 1935.',
+  description: 'Nearly ninety years of the same corner. The story of Goggins of Monkstown — a third-generation family pub on Monkstown Road since 1935.',
 }
 
 const timeline = [
   {
     year: '1935',
-    text: 'Goggins opens its doors on Monkstown Road. Monkstown is a village of fishermen, railway workers and seaside day-trippers. The pub becomes what all good pubs become: the living room the neighbourhood never knew it needed.',
+    text: 'Goggins first opened on Monkstown Road at a time when the village was a quieter, more working-class place — dockers, railway men, and families who\'d lived on the same streets for generations. The pub quickly became a fixture of daily life, the kind of place where you\'d stop in after a shift, catch up on the news, and know half the room by name.',
   },
   {
     year: '1970s',
-    text: 'A growing community calls for more room. The bar expands, the upstairs lounge takes shape. More tables, more rounds, more nights that stretch well past closing time — at least in memory.',
+    text: 'Monkstown was changing — young families moving in, the old trades giving way to a more suburban feel. Goggins grew with it. The bar was extended and an upstairs lounge added, giving regulars more room and making it a proper venue for celebrations, club nights and get-togethers that had no other home.',
   },
   {
     year: '2000s',
-    text: 'Careful renovations keep the bones intact. The worn timber, the snug corners, the particular slant of afternoon light through the front windows — none of it touched. Some things are worth preserving exactly as they are.',
+    text: 'A new era of renovation brought fresh energy without losing what made the place. The snugs stayed. The timber stayed. The second and third generations of the family kept the same warmth that had always defined it, while opening the doors to a new crowd — a more mixed, more lively Monkstown that had discovered what the locals always knew.',
   },
   {
     year: 'Today',
-    text: 'The third generation takes the reins. The pints are as good as they\'ve ever been, the welcome is the same, and the door on Monkstown Road is still open to anyone who walks through it.',
+    text: 'Goggins is in good hands. Under new family management, it\'s gone back to its roots — live music at weekends, sport on the screens, a proper pint and a genuine welcome. Nearly ninety years on from that first opening, it\'s still the same pub at heart: a place where Monkstown comes together.',
   },
 ]
 
@@ -54,15 +54,16 @@ export default function OurStory() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="ornament-divider mb-10"><span>&#10022;</span></div>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed mb-6">
-              Some pubs are just places to drink. Goggins is a place to belong.
-              Tucked into the curve of Monkstown Road, a short walk from the sea, it
-              has been holding court since 1935 — through booms and recessions, through
-              funerals and christenings, through the quiet Tuesday nights that are
-              somehow the best ones.
+              Goggins has been part of Monkstown life since 1935. That&apos;s nearly
+              ninety years of locals pulling up a stool, of families marking occasions
+              here, of the pub quietly becoming the kind of place a neighbourhood
+              builds its memories around. Not many places can say that.
             </p>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed">
-              Three generations of the same family. Nearly a century of the same corner.
-              The faces change, the pints stay cold, and the door is always open.
+              It&apos;s a third-generation family pub, and it shows — in the welcome,
+              in the way the regulars are known by name, and in the fact that for all
+              the changes the years bring, walking into Goggins still feels like
+              walking into somewhere that was expecting you.
             </p>
           </div>
         </div>
