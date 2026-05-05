@@ -3,29 +3,29 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Our Story | Goggins of Monkstown',
-  description: 'Nearly seventy years of the same corner. The story of Goggins of Monkstown — a third-generation family pub on Monkstown Road since 1957.',
+  description: 'Goggins of Monkstown has been a family-run pub on Monkstown Road since 1957. Now reopening under new family management.',
 }
 
 const timeline = [
   {
     year: '1957',
-    text: 'Joe Keegan founded Goggins on Monkstown Road, trading as Goggin & Co. Ltd. Monkstown was a quieter, more working-class village back then, and Joe built something that fitted it perfectly — a proper local where you knew the faces, the banter was good, and you never had to explain how you took your pint.',
+    text: 'Goggins opened on Monkstown Road as a family-run local. From the start it was a straightforward place — good pints, familiar faces, and a welcome that didn\'t need to try too hard.',
   },
   {
     year: '1960s – 80s',
-    text: 'Joe\'s years — and they were good ones. He extended the bar, added the upstairs lounge, and turned Goggins into a proper institution. GAA clubs upstairs, christenings in the lounge, Friday nights three deep at the bar. Joe made it the kind of pub people talk about for the rest of their lives.',
+    text: 'The bar expanded, the upstairs lounge was added, and Goggins settled into its role as a proper neighbourhood pub. It became the kind of place that hosted the big nights and the quiet ones equally well.',
   },
   {
     year: 'Late 1990s',
-    text: 'Maurice took over from Joe and renovated throughout — modernising where it needed it while keeping everything that gave Goggins its character. The timber stayed, the snugs stayed, the welcome stayed. These became the roaring years: packed most nights, sport on the screens, live music at weekends, and a crowd that regularly spilled out onto Monkstown Road. The regulars were part of the furniture and the pub earned its reputation as one of the best locals in South Dublin.',
+    text: 'The pub passed to the next generation, who renovated and ran it through its busiest years. For a long stretch Goggins was well-known across South Dublin — a reliable spot with a good atmosphere and a loyal crowd.',
   },
   {
-    year: '2020 onwards',
-    text: 'Like many pubs, Goggins felt the weight of the years after 2020. Trade declined, the doors eventually closed, and the pub sat quiet for the first time in over sixty years.',
+    year: 'Recent years',
+    text: 'Trade declined after 2020 and the pub has been closed for a period. It\'s a situation many Irish pubs have faced, and one the family is determined to turn around.',
   },
   {
     year: 'Today',
-    text: 'Mark and Kate are bringing Goggins back. They grew up knowing what this pub meant to Monkstown — and they\'re not willing to let it go. The renovation is underway, the welcome is being rebuilt, and the pint will be worth the wait. Some things are too good to leave behind.',
+    text: 'Goggins is reopening under new family management. The aim is simple: restore what made the pub worth coming to in the first place, and give Monkstown back its local.',
   },
 ]
 
@@ -58,14 +58,14 @@ export default function OurStory() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="ornament-divider mb-10"><span>&#10022;</span></div>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed mb-6">
-              Goggins has been part of Monkstown life since 1957, when Joe Keegan
-              first opened the doors on Monkstown Road. Nearly seventy years of the
-              same corner, the same warm welcome, and more memories made here than
-              anyone could count. Not many places can say that.
+              Goggins has been on Monkstown Road since 1957. It has been a family pub
+              its entire life — passed down through generations, each putting their
+              own mark on it while keeping the things that made it worth keeping.
             </p>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed">
-              The pub has been through quiet periods before and come back stronger.
-              Mark and Kate are making sure this time is no different.
+              After a difficult few years, it is reopening under new family management.
+              The intention is to get back to what Goggins has always been — a good
+              local pub for a great part of Dublin.
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function OurStory() {
                 Our History
               </p>
               <h2 className="font-serif text-4xl font-medium text-pub-green-700">
-                Nearly Seventy Years of Service
+                A Brief History
               </h2>
             </div>
 
