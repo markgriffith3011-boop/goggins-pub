@@ -4,31 +4,32 @@ import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import hoursData from '@/data/hours.json'
 
-const formatHours = () => {
-  const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-  const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+type Status = 'idle' | 'submitting' | 'success' | 'error'
 
-  return dayNames.map((day, idx) => {
-    const dayKey = days[idx] as keyof typeof hoursData
-    const hours = hoursData[dayKey]
-    return `${day}: ${hours.open} - ${hours.close}`
-  })
+const EMPTY_FORM = {
+  name: '',
+  email: '',
+  phone: '',
+  date: '',
+  time: '',
+  groupSize: '',
+  message: '',
 }
+
+// Computed once at module level — hoursData is a static import that never changes
+const hours = (() => {
+  const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'] as const
+  const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  return dayNames.map((day, idx) => {
+    const h = hoursData[days[idx]]
+    return `${day}: ${h.open} - ${h.close}`
+  })
+})()
 
 export default function ContactForm() {
   const searchParams = useSearchParams()
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    date: '',
-    time: '',
-    groupSize: '',
-    message: '',
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
+  const [formData, setFormData] = useState(EMPTY_FORM)
+  const [status, setStatus] = useState<Status>('idle')
 
   useEffect(() => {
     const space = searchParams.get('space')
@@ -42,8 +43,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitting(true)
-    setError(false)
+    setStatus('submitting')
 
     try {
       const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
@@ -60,23 +60,13 @@ export default function ContactForm() {
       })
 
       if (response.ok) {
-        setSubmitted(true)
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          date: '',
-          time: '',
-          groupSize: '',
-          message: '',
-        })
+        setStatus('success')
+        setFormData(EMPTY_FORM)
       } else {
-        setError(true)
+        setStatus('error')
       }
     } catch {
-      setError(true)
-    } finally {
-      setSubmitting(false)
+      setStatus('error')
     }
   }
 
@@ -88,8 +78,6 @@ export default function ContactForm() {
       [e.target.name]: e.target.value,
     }))
   }
-
-  const hours = formatHours()
 
   return (
     <section className="section-padding">
@@ -128,7 +116,6 @@ export default function ContactForm() {
               </div>
             </div>
 
-            {/* Map */}
             <div className="mt-8">
               <h3 className="font-semibold text-pub-wood-800 mb-4">Find Us</h3>
               <div className="aspect-video bg-pub-wood-200 rounded-lg flex items-center justify-center">
@@ -142,7 +129,7 @@ export default function ContactForm() {
             <h2 className="font-serif text-3xl font-bold text-pub-green-800 mb-6">
               Send us a Message
             </h2>
-            {submitted ? (
+            {status === 'success' ? (
               <div className="bg-pub-green-100 border border-pub-green-300 text-pub-green-800 p-6 rounded-lg">
                 <p className="font-semibold mb-2">Thank you for your message!</p>
                 <p>We&apos;ll get back to you within 24 hours.</p>
@@ -252,15 +239,15 @@ export default function ContactForm() {
                   />
                 </div>
 
-                {error && (
+                {status === 'error' && (
                   <p className="text-sm text-red-600">
                     Something went wrong. Please try again or email us directly at{' '}
                     <a href="mailto:gogginspub@gmail.com" className="underline">gogginspub@gmail.com</a>.
                   </p>
                 )}
 
-                <button type="submit" className="btn-primary w-full" disabled={submitting}>
-                  {submitting ? 'Sending…' : 'Send Message'}
+                <button type="submit" className="btn-primary w-full" disabled={status === 'submitting'}>
+                  {status === 'submitting' ? 'Sending…' : 'Send Message'}
                 </button>
 
                 <p className="text-xs text-pub-wood-500 text-center">

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { weeklyEvents, featuredEventDays } from '@/data/events'
 
 const features = [
   {
@@ -47,6 +48,10 @@ const features = [
     ),
   },
 ]
+
+const sportsTags = ['GAA', 'Rugby', 'Soccer', 'NFL', 'Racing']
+
+const featuredEvents = weeklyEvents.filter((e) => featuredEventDays.includes(e.day))
 
 export default function Home() {
   return (
@@ -136,7 +141,6 @@ export default function Home() {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-5">
-              {/* Music icon */}
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-pub-wood-400 flex-shrink-0">
                 <path d="M18 36V14l22-4v22" />
                 <circle cx="14" cy="36" r="4" />
@@ -160,7 +164,6 @@ export default function Home() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex justify-center mb-6 text-pub-wood-500">
-              {/* TV/screen icon */}
               <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-12 h-12">
                 <rect x="4" y="8" width="40" height="28" rx="2" />
                 <path d="M16 42h16M24 36v6" />
@@ -178,7 +181,7 @@ export default function Home() {
               watch it the right way: with a pint in hand.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-2">
-              {['GAA', 'Rugby', 'Soccer', 'NFL', 'Racing'].map((sport) => (
+              {sportsTags.map((sport) => (
                 <span key={sport} className="font-sans text-xs uppercase tracking-widest px-4 py-2 border border-pub-cream-300 text-pub-wood-500">
                   {sport}
                 </span>
@@ -196,16 +199,12 @@ export default function Home() {
             <h2 className="font-serif text-4xl md:text-5xl font-medium text-pub-green-700">What&rsquo;s On</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-            {[
-              { day: 'Thursday', name: 'Quiz Night', time: 'From 8.30pm', desc: 'Teams of up to 6. Prizes on the night. Book early — it fills up fast.' },
-              { day: 'Saturday', name: 'Live Music', time: 'From 9pm', desc: 'Local acts every week. Folk, rock, and everything in between.' },
-              { day: 'Sunday', name: 'Trad Session', time: 'From 3pm', desc: 'Traditional Irish music followed by live sports on the big screen.' },
-            ].map((event) => (
-              <div key={event.name} className="border border-pub-cream-200 p-7 text-center">
+            {featuredEvents.map((event) => (
+              <div key={event.day} className="border border-pub-cream-200 p-7 text-center">
                 <p className="font-sans text-xs uppercase tracking-widest text-pub-wood-500 mb-3">{event.day}</p>
                 <h3 className="font-serif text-2xl font-medium text-pub-green-700 mb-3">{event.name}</h3>
                 <div className="w-8 h-px bg-pub-wood-400 mx-auto mb-4" />
-                <p className="text-pub-green-600 text-sm font-light leading-relaxed mb-4">{event.desc}</p>
+                <p className="text-pub-green-600 text-sm font-light leading-relaxed mb-4">{event.description}</p>
                 <p className="font-sans text-xs uppercase tracking-wide text-pub-wood-500">{event.time}</p>
               </div>
             ))}

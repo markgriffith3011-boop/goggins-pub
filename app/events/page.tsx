@@ -1,70 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { weeklyEvents, tagColours } from '@/data/events'
 
 export const metadata: Metadata = {
   title: "What's On | Goggins of Monkstown",
-  description: 'See what\'s happening at Goggins of Monkstown — live music, quiz nights, trad sessions, sports and more every week.',
-}
-
-const weeklyEvents = [
-  {
-    day: 'Monday',
-    name: 'Poker Night',
-    description: 'Friendly Texas Hold\'em from 8pm. All welcome — beginners and regulars alike. Ask at the bar to join a table.',
-    time: 'From 8pm',
-    tag: 'Games',
-  },
-  {
-    day: 'Tuesday',
-    name: 'Daily Specials',
-    description: 'Tuesday specials on food and selected drinks. Ask our staff about today\'s offers.',
-    time: 'All day',
-    tag: 'Food & Drink',
-  },
-  {
-    day: 'Wednesday',
-    name: 'Wine & Dine',
-    description: 'Midweek treat — discounted bottles of wine with food orders. Perfect for a date night or catch-up.',
-    time: 'From 5pm',
-    tag: 'Food & Drink',
-  },
-  {
-    day: 'Thursday',
-    name: 'Quiz Night',
-    description: 'The classic Goggins pub quiz. Teams of up to 6. Prizes for the top three. Book your table early — it fills up fast.',
-    time: 'From 8.30pm',
-    tag: 'Entertainment',
-  },
-  {
-    day: 'Friday',
-    name: 'Afterwork Drinks',
-    description: 'Start the weekend right. We\'re open from 11am — whether it\'s a quick one after work or a long Friday session.',
-    time: 'From 11am',
-    tag: 'Social',
-  },
-  {
-    day: 'Saturday',
-    name: 'Live Music',
-    description: 'Live acts every Saturday night. From Irish folk to rock covers, we bring the best local talent to Monkstown.',
-    time: 'From 9pm',
-    tag: 'Live Music',
-  },
-  {
-    day: 'Sunday',
-    name: 'Trad Session & Sports',
-    description: 'Traditional Irish music session in the afternoon, followed by live sports on the big screen. The perfect Sunday.',
-    time: '3pm trad · 6pm sports',
-    tag: 'Trad & Sport',
-  },
-]
-
-const tagColours: Record<string, string> = {
-  'Games': 'bg-pub-cream-200 text-pub-green-700',
-  'Food & Drink': 'bg-pub-cream-200 text-pub-green-700',
-  'Entertainment': 'bg-pub-wood-500/10 text-pub-wood-600',
-  'Social': 'bg-pub-cream-200 text-pub-green-700',
-  'Live Music': 'bg-pub-wood-500/10 text-pub-wood-600',
-  'Trad & Sport': 'bg-pub-wood-500/10 text-pub-wood-600',
+  description: "See what's happening at Goggins of Monkstown — live music, quiz nights, trad sessions, sports and more every week.",
 }
 
 export default function Events() {
@@ -102,30 +42,21 @@ export default function Events() {
                 key={event.day}
                 className="border border-pub-cream-200 bg-white p-8 flex flex-col gap-4 hover:border-pub-wood-400 transition-colors duration-200"
               >
-                {/* Day label */}
                 <p className="font-sans text-xs uppercase tracking-widest text-pub-wood-500">
                   {event.day}
                 </p>
-
-                {/* Event name */}
                 <h2 className="font-serif text-2xl font-medium text-pub-green-700 leading-snug">
                   {event.name}
                 </h2>
-
-                {/* Divider */}
                 <div className="w-10 h-px bg-pub-wood-400" />
-
-                {/* Description */}
                 <p className="text-pub-green-600 font-light leading-relaxed text-sm flex-1">
                   {event.description}
                 </p>
-
-                {/* Footer row */}
                 <div className="flex items-center justify-between pt-2">
                   <span className="font-sans text-xs text-pub-wood-500 uppercase tracking-wide">
                     {event.time}
                   </span>
-                  <span className={`font-sans text-xs px-3 py-1 uppercase tracking-wide ${tagColours[event.tag] || 'bg-pub-cream-200 text-pub-green-700'}`}>
+                  <span className={`font-sans text-xs px-3 py-1 uppercase tracking-wide ${tagColours[event.tag]}`}>
                     {event.tag}
                   </span>
                 </div>
