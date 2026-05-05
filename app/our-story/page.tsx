@@ -6,7 +6,13 @@ export const metadata: Metadata = {
   description: 'Goggins of Monkstown has been a family-run pub on Monkstown Road since 1957. Now reopening under new family management.',
 }
 
-const timeline = [
+type TimelineEntry = {
+  year: string
+  text: string
+  images?: string[]
+}
+
+const timeline: TimelineEntry[] = [
   {
     year: '1957',
     text: 'Goggins opened on Monkstown Road as a family-run local. From the start it was a straightforward place — good pints, familiar faces, and a welcome that didn\'t need to try too hard.',
@@ -14,6 +20,7 @@ const timeline = [
   {
     year: '1960s – 80s',
     text: 'The bar expanded, the upstairs lounge was added, and Goggins settled into its role as a proper neighbourhood pub. It became the kind of place that hosted the big nights and the quiet ones equally well.',
+    images: ['/images/story-80s-1.jpg', '/images/story-80s-2.jpg', '/images/story-80s-3.jpg'],
   },
   {
     year: 'Late 1990s',
@@ -107,13 +114,28 @@ export default function OurStory() {
                       <div className="w-3 h-3 rounded-full bg-pub-wood-500 border-2 border-white mt-1.5 z-10" />
                     </div>
                     {/* Content */}
-                    <div className="pb-2">
+                    <div className="pb-2 flex-1">
                       <h3 className="font-serif text-2xl font-medium text-pub-green-700 mb-2">
                         {item.year}
                       </h3>
                       <p className="text-pub-green-600 font-light leading-relaxed">
                         {item.text}
                       </p>
+                      {item.images && (
+                        <div className="grid grid-cols-3 gap-2 mt-4">
+                          {item.images.map((src, i) => (
+                            <div key={i} className="relative aspect-[4/3] overflow-hidden">
+                              <Image
+                                src={src}
+                                alt={`Goggins ${item.year} — photo ${i + 1}`}
+                                fill
+                                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                                sizes="(max-width: 768px) 33vw, 200px"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
