@@ -9,23 +9,23 @@ export const metadata: Metadata = {
 const timeline = [
   {
     year: '1957',
-    text: 'Goggins first opened on Monkstown Road under the Goggin family name, trading as Goggin & Co. Ltd. The village was a quieter, more working-class place back then — dockers, railway men, and families who\'d lived on the same streets for generations. The pub quickly became a fixture of daily life: the place you stopped after a shift, caught up on the news, and knew half the room by name.',
+    text: 'Joe Keegan founded Goggins on Monkstown Road, trading as Goggin & Co. Ltd. Monkstown was a quieter, more working-class village back then, and Joe built something that fitted it perfectly — a proper local, where you knew the faces, the banter was good, and you never had to explain how you took your pint.',
   },
   {
-    year: '1970s',
-    text: 'The second generation took the reins when the current owner\'s grandfather stepped in. He saw the potential and ran with it — extending the bar, building out the upstairs lounge, and turning Goggins into a proper local institution. Under his watch the pub became the heartbeat of the area: GAA clubs meeting upstairs, christenings in the lounge, Friday nights three deep at the bar.',
+    year: '1970s – 80s',
+    text: 'Joe\'s sons Maurice and Philip took over and ran with it. Between them they extended the bar, built out the upstairs lounge, and pushed Goggins into its golden era. GAA clubs upstairs, christenings in the lounge, Friday nights three deep at the bar. The two brothers made it the kind of pub people talk about for the rest of their lives.',
   },
   {
     year: '1980s – 90s',
-    text: 'These were the roaring years. Goggins was packed most nights — sport on the screens, live music at weekends, a crowd that spilled out onto Monkstown Road on a good Friday. The regulars became part of the furniture, the staff knew everyone\'s order, and the pub earned its reputation as one of the best in South Dublin. Good times, well remembered.',
+    text: 'The roaring years. Goggins was packed most nights — sport on the screens, live music at weekends, a crowd that regularly spilled out onto Monkstown Road. The regulars became part of the furniture, the staff knew everyone\'s order, and the pub earned its place as one of the best-known locals in South Dublin. Rarely quiet. Never dull.',
   },
   {
     year: '1999',
-    text: 'The third generation arrived when the current owner\'s father took over and put his own stamp on the place. A full renovation — but done with care. The character stayed. The timber, the snugs, the feeling of the place. He brought it into a new era without losing what made it worth keeping.',
+    text: 'Maurice took on the pub alone after the loss of his brother Philip, and put his own stamp on the place with a full renovation. He kept everything that mattered — the timber, the snugs, the warmth — while bringing it into a new era. He carried the pub, and the family name, with real pride.',
   },
   {
     year: 'Today',
-    text: 'Now Mark and Kate are doing it all over again. Taking on a pub is never the easy road, but Goggins is worth it. They\'ve gone back to what made the place — live music at weekends, sport on the screens, a proper pint and a door that\'s open to everyone. Nearly seventy years on from that first licence, the same spirit is very much alive.',
+    text: 'After two years with the doors closed, Mark and Kate are bringing Goggins back. It hasn\'t been straightforward — but then nothing worth doing usually is. They\'re reopening with the same belief Joe Keegan had in 1957: that Monkstown needs a proper local, and Goggins is it. The welcome is back. The pint is ready. Come in.',
   },
 ]
 
@@ -58,15 +58,15 @@ export default function OurStory() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="ornament-divider mb-10"><span>&#10022;</span></div>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed mb-6">
-              Goggins has been part of Monkstown life since 1957. That&apos;s nearly seventy years of locals pulling up a stool, of families marking occasions
-              here, of the pub quietly becoming the kind of place a neighbourhood
-              builds its memories around. Not many places can say that.
+              Goggins has been part of Monkstown life since 1957, when Joe Keegan
+              first opened the doors on Monkstown Road. Nearly seventy years, four
+              generations of the same family, and more memories made here than anyone
+              could count. Not many places can say that.
             </p>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed">
-              It&apos;s a third-generation family pub, and it shows — in the welcome,
-              in the way the regulars are known by name, and in the fact that for all
-              the changes the years bring, walking into Goggins still feels like
-              walking into somewhere that was expecting you.
+              Now, after two years with the doors closed, Mark and Kate are bringing
+              it back. The same pub, the same spirit, the same corner of Monkstown —
+              just ready for the next chapter.
             </p>
           </div>
         </div>
