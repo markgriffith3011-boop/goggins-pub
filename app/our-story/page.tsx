@@ -122,29 +122,31 @@ export default function OurStory() {
                         {item.text}
                       </p>
                       {item.images && (
-                        <div className="mt-6 grid grid-cols-2 gap-2">
-                          {/* Large image — spans full height on the left */}
-                          <div className="relative row-span-2 aspect-[3/4] overflow-hidden">
+                        <div className="mt-6 flex flex-col gap-2">
+                          {/* Full-width landscape — shows the full frontage */}
+                          <div className="relative aspect-[3/2] overflow-hidden">
                             <Image
                               src={item.images[0]}
                               alt={`Goggins ${item.year} — photo 1`}
                               fill
-                              className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                              sizes="(max-width: 768px) 50vw, 300px"
+                              className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-500"
+                              sizes="(max-width: 768px) 100vw, 580px"
                             />
                           </div>
-                          {/* Two smaller images stacked on the right */}
-                          {item.images.slice(1).map((src, i) => (
-                            <div key={i} className="relative aspect-[4/3] overflow-hidden">
-                              <Image
-                                src={src}
-                                alt={`Goggins ${item.year} — photo ${i + 2}`}
-                                fill
-                                className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                                sizes="(max-width: 768px) 50vw, 300px"
-                              />
-                            </div>
-                          ))}
+                          {/* Two side-by-side below */}
+                          <div className="grid grid-cols-2 gap-2">
+                            {item.images.slice(1).map((src, i) => (
+                              <div key={i} className="relative aspect-[3/2] overflow-hidden">
+                                <Image
+                                  src={src}
+                                  alt={`Goggins ${item.year} — photo ${i + 2}`}
+                                  fill
+                                  className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-500"
+                                  sizes="(max-width: 768px) 50vw, 290px"
+                                />
+                              </div>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
