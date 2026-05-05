@@ -9,23 +9,27 @@ export const metadata: Metadata = {
 const timeline = [
   {
     year: '1957',
-    text: 'Joe Keegan founded Goggins on Monkstown Road, trading as Goggin & Co. Ltd. Monkstown was a quieter, more working-class village back then, and Joe built something that fitted it perfectly — a proper local, where you knew the faces, the banter was good, and you never had to explain how you took your pint.',
+    text: 'Joe Keegan founded Goggins on Monkstown Road, trading as Goggin & Co. Ltd. Monkstown was a quieter, more working-class village back then, and Joe built something that fitted it perfectly — a proper local where you knew the faces, the banter was good, and you never had to explain how you took your pint.',
   },
   {
-    year: '1970s – 80s',
-    text: 'Joe\'s sons Maurice and Philip took over and ran with it. Between them they extended the bar, built out the upstairs lounge, and pushed Goggins into its golden era. GAA clubs upstairs, christenings in the lounge, Friday nights three deep at the bar. The two brothers made it the kind of pub people talk about for the rest of their lives.',
+    year: '1960s – 80s',
+    text: 'Joe\'s years. He extended the bar, added the upstairs lounge, and turned Goggins into a proper institution. GAA clubs meeting upstairs, christenings in the lounge, Friday nights three deep at the bar. The pub became the kind of place people talk about for the rest of their lives — and Joe was the man behind all of it.',
   },
   {
     year: '1980s – 90s',
-    text: 'The roaring years. Goggins was packed most nights — sport on the screens, live music at weekends, a crowd that regularly spilled out onto Monkstown Road. The regulars became part of the furniture, the staff knew everyone\'s order, and the pub earned its place as one of the best-known locals in South Dublin. Rarely quiet. Never dull.',
+    text: 'The roaring years under Joe\'s watch. Goggins was packed most nights — sport on the screens, live music at weekends, a crowd that spilled out onto Monkstown Road. The regulars became part of the furniture, the staff knew everyone\'s order, and the pub cemented its reputation as one of the best locals in South Dublin. Rarely quiet. Never dull.',
   },
   {
-    year: '1999',
-    text: 'Maurice took on the pub alone after the loss of his brother Philip, and put his own stamp on the place with a full renovation. He kept everything that mattered — the timber, the snugs, the warmth — while bringing it into a new era. He carried the pub, and the family name, with real pride.',
+    year: 'Late 1990s',
+    text: 'When Joe passed, his sons Maurice and Philip inherited their shares in Goggin & Co. Ltd. and took over running the pub together, with the rest of the family benefiting from the estate. The two brothers kept the place going with the same dedication Joe had shown for forty years.',
+  },
+  {
+    year: 'Maurice alone',
+    text: 'After the loss of his brother Philip, Maurice carried Goggins on his own. He\'d grown up in the pub, knew every corner of it, and kept it running with quiet determination through the years that followed.',
   },
   {
     year: 'Today',
-    text: 'After two years with the doors closed, Mark and Kate are bringing Goggins back. It hasn\'t been straightforward — but then nothing worth doing usually is. They\'re reopening with the same belief Joe Keegan had in 1957: that Monkstown needs a proper local, and Goggins is it. The welcome is back. The pint is ready. Come in.',
+    text: 'After two years with the doors closed, Mark and Kate are bringing Goggins back. It hasn\'t been the easy road — but then nothing worth doing usually is. They\'re reopening with the same belief Joe had in 1957: that Monkstown needs a proper local, and Goggins is it. The welcome is back. The pint is ready. Come in.',
   },
 ]
 
