@@ -101,7 +101,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-14 pt-8 border-t border-white/10 text-center text-white/60 text-xs font-light tracking-wide">
           <p>&copy; {new Date().getFullYear()} Goggins of Monkstown. All rights reserved.</p>
-          <p className="mt-2 font-serif italic">A South Dublin institution since 1935.</p>
+          <p className="mt-2 font-serif italic">A South Dublin institution since 1957.</p>
         </div>
       </div>
     </footer>

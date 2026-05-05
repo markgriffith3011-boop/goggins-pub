@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Our Story | Goggins of Monkstown',
-  description: 'Nearly ninety years of the same corner. The story of Goggins of Monkstown — a third-generation family pub on Monkstown Road since 1935.',
+  description: 'Nearly seventy years of the same corner. The story of Goggins of Monkstown — a third-generation family pub on Monkstown Road since 1957.',
 }
 
 const timeline = [
   {
-    year: '1935',
+    year: '1957',
     text: 'Goggins first opened on Monkstown Road at a time when the village was a quieter, more working-class place — dockers, railway men, and families who\'d lived on the same streets for generations. The pub quickly became a fixture of daily life, the kind of place where you\'d stop in after a shift, catch up on the news, and know half the room by name.',
   },
   {
@@ -21,7 +21,7 @@ const timeline = [
   },
   {
     year: 'Today',
-    text: 'Goggins is in good hands. Under new family management, it\'s gone back to its roots — live music at weekends, sport on the screens, a proper pint and a genuine welcome. Nearly ninety years on from that first opening, it\'s still the same pub at heart: a place where Monkstown comes together.',
+    text: 'Goggins is in good hands. Under new family management, it\'s gone back to its roots — live music at weekends, sport on the screens, a proper pint and a genuine welcome. Nearly seventy years on from that first opening, it\'s still the same pub at heart: a place where Monkstown comes together.',
   },
 ]
 
@@ -40,7 +40,7 @@ export default function OurStory() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/20 to-black/60" />
         <div className="relative z-10 container-custom pb-14">
           <p className="font-sans text-xs uppercase tracking-widest text-white/80 mb-3">
-            Est. 1935 &middot; Monkstown, Co. Dublin
+            Est. 1957 &middot; Monkstown, Co. Dublin
           </p>
           <h1 className="font-serif text-5xl md:text-6xl font-medium text-white">
             A Pub with History
@@ -54,8 +54,7 @@ export default function OurStory() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="ornament-divider mb-10"><span>&#10022;</span></div>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed mb-6">
-              Goggins has been part of Monkstown life since 1935. That&apos;s nearly
-              ninety years of locals pulling up a stool, of families marking occasions
+              Goggins has been part of Monkstown life since 1957. That&apos;s nearly seventy years of locals pulling up a stool, of families marking occasions
               here, of the pub quietly becoming the kind of place a neighbourhood
               builds its memories around. Not many places can say that.
             </p>
@@ -89,7 +88,7 @@ export default function OurStory() {
                 Our History
               </p>
               <h2 className="font-serif text-4xl font-medium text-pub-green-700">
-                Nearly a Century of Service
+                Nearly Seventy Years of Service
               </h2>
             </div>
 

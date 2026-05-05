@@ -21,12 +21,12 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gogginspub.com'),
-  title: 'Goggins of Monkstown | A South Dublin Institution Since 1935',
+  title: 'Goggins of Monkstown | A South Dublin Institution Since 1957',
   description: 'Goggins of Monkstown is a third-generation family pub rooted in character, warmth and tradition. Known for a great pint, a classic Irish welcome and one of the best locations in South County Dublin.',
   keywords: 'Dublin pub, Monkstown, Irish pub, Goggins, South Dublin, traditional pub, Guinness, whiskey',
   authors: [{ name: 'Goggins of Monkstown' }],
   openGraph: {
-    title: 'Goggins of Monkstown | A South Dublin Institution Since 1935',
+    title: 'Goggins of Monkstown | A South Dublin Institution Since 1957',
     description: 'A third-generation family pub rooted in character, warmth and tradition.',
     url: 'https://gogginspub.com',
     siteName: 'Goggins of Monkstown',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Goggins of Monkstown',
-    description: 'A South Dublin institution since 1935',
+    description: 'A South Dublin institution since 1957',
   },
   robots: {
     index: true,
@@ -97,7 +97,7 @@ export default function RootLayout({
                   closes: '23:00',
                 },
               ],
-              foundingDate: '1935',
+              foundingDate: '1957',
             }),
           }}
         />

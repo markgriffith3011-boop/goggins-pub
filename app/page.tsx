@@ -73,13 +73,13 @@ export default function Home() {
           <div className="container-custom pb-16 md:pb-20">
             <div className="max-w-3xl">
               <p className="font-sans text-xs md:text-sm uppercase tracking-widest text-white/90 mb-4">
-                Est. 1935 &middot; Monkstown, Co. Dublin
+                Est. 1957 &middot; Monkstown, Co. Dublin
               </p>
               <h1 className="font-serif text-5xl md:text-7xl font-medium text-white mb-4 leading-tight">
                 Goggins of Monkstown
               </h1>
               <p className="font-serif italic text-xl md:text-2xl text-white/90 mb-10 max-w-xl">
-                A South Dublin institution since 1935.
+                A South Dublin institution since 1957.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/menu" className="btn-light">
@@ -107,7 +107,7 @@ export default function Home() {
             <div className="ornament-divider"><span>&#10022;</span></div>
             <p className="text-base md:text-lg text-pub-green-600 leading-relaxed font-light">
               A warm welcome, a great pint and a touch of old-school Irish character.
-              Goggins has been at the heart of Monkstown life for nearly a century —
+              Goggins has been at the heart of Monkstown life for nearly seventy years —
               a place where locals gather, friends reconnect, and visitors discover
               a true Dublin pub experience.
             </p>
