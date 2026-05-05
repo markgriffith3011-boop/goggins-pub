@@ -13,23 +13,23 @@ const timeline = [
   },
   {
     year: '1960s – 80s',
-    text: 'Joe\'s years. He extended the bar, added the upstairs lounge, and turned Goggins into a proper institution. GAA clubs meeting upstairs, christenings in the lounge, Friday nights three deep at the bar. The pub became the kind of place people talk about for the rest of their lives — and Joe was the man behind all of it.',
+    text: 'Joe\'s years — and they were good ones. He extended the bar, added the upstairs lounge, and turned Goggins into a proper institution. GAA clubs upstairs, christenings in the lounge, Friday nights three deep at the bar. Joe made it the kind of pub people talk about for the rest of their lives.',
   },
   {
     year: '1980s – 90s',
-    text: 'The roaring years under Joe\'s watch. Goggins was packed most nights — sport on the screens, live music at weekends, a crowd that spilled out onto Monkstown Road. The regulars became part of the furniture, the staff knew everyone\'s order, and the pub cemented its reputation as one of the best locals in South Dublin. Rarely quiet. Never dull.',
+    text: 'The roaring years. Goggins was packed most nights — sport on the screens, live music at weekends, a crowd that regularly spilled onto Monkstown Road. The regulars were part of the furniture, the staff knew everyone\'s order, and the pub had cemented itself as one of the best locals in South Dublin. Rarely quiet. Never dull.',
   },
   {
     year: 'Late 1990s',
-    text: 'When Joe passed, his sons Maurice and Philip inherited their shares in Goggin & Co. Ltd. and took over running the pub together, with the rest of the family benefiting from the estate. The two brothers kept the place going with the same dedication Joe had shown for forty years.',
+    text: 'Maurice took over from Joe and put his own stamp on the place with a full renovation — modernising where it needed it while keeping everything that gave Goggins its character. The timber stayed. The snugs stayed. The welcome stayed.',
   },
   {
-    year: 'Maurice alone',
-    text: 'After the loss of his brother Philip, Maurice carried Goggins on his own. He\'d grown up in the pub, knew every corner of it, and kept it running with quiet determination through the years that followed.',
+    year: '2020 onwards',
+    text: 'Like many pubs, Goggins felt the weight of the years after 2020. Trade declined, the doors eventually closed, and the pub sat quiet for the first time in over sixty years.',
   },
   {
     year: 'Today',
-    text: 'After two years with the doors closed, Mark and Kate are bringing Goggins back. It hasn\'t been the easy road — but then nothing worth doing usually is. They\'re reopening with the same belief Joe had in 1957: that Monkstown needs a proper local, and Goggins is it. The welcome is back. The pint is ready. Come in.',
+    text: 'Mark and Kate are bringing Goggins back. They grew up knowing what this pub meant to Monkstown — and they\'re not willing to let it go. The renovation is underway, the welcome is being rebuilt, and the pint will be worth the wait. Some things are too good to leave behind.',
   },
 ]
 
@@ -63,14 +63,13 @@ export default function OurStory() {
             <div className="ornament-divider mb-10"><span>&#10022;</span></div>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed mb-6">
               Goggins has been part of Monkstown life since 1957, when Joe Keegan
-              first opened the doors on Monkstown Road. Nearly seventy years, four
-              generations of the same family, and more memories made here than anyone
-              could count. Not many places can say that.
+              first opened the doors on Monkstown Road. Nearly seventy years of the
+              same corner, the same warm welcome, and more memories made here than
+              anyone could count. Not many places can say that.
             </p>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed">
-              Now, after two years with the doors closed, Mark and Kate are bringing
-              it back. The same pub, the same spirit, the same corner of Monkstown —
-              just ready for the next chapter.
+              The pub has been through quiet periods before and come back stronger.
+              Mark and Kate are making sure this time is no different.
             </p>
           </div>
         </div>
