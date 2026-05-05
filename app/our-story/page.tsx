@@ -16,12 +16,8 @@ const timeline = [
     text: 'Joe\'s years — and they were good ones. He extended the bar, added the upstairs lounge, and turned Goggins into a proper institution. GAA clubs upstairs, christenings in the lounge, Friday nights three deep at the bar. Joe made it the kind of pub people talk about for the rest of their lives.',
   },
   {
-    year: '1980s – 90s',
-    text: 'The roaring years. Goggins was packed most nights — sport on the screens, live music at weekends, a crowd that regularly spilled onto Monkstown Road. The regulars were part of the furniture, the staff knew everyone\'s order, and the pub had cemented itself as one of the best locals in South Dublin. Rarely quiet. Never dull.',
-  },
-  {
     year: 'Late 1990s',
-    text: 'Maurice took over from Joe and put his own stamp on the place with a full renovation — modernising where it needed it while keeping everything that gave Goggins its character. The timber stayed. The snugs stayed. The welcome stayed.',
+    text: 'Maurice took over from Joe and renovated throughout — modernising where it needed it while keeping everything that gave Goggins its character. The timber stayed, the snugs stayed, the welcome stayed. These became the roaring years: packed most nights, sport on the screens, live music at weekends, and a crowd that regularly spilled out onto Monkstown Road. The regulars were part of the furniture and the pub earned its reputation as one of the best locals in South Dublin.',
   },
   {
     year: '2020 onwards',
