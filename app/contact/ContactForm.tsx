@@ -87,16 +87,6 @@ export default function ContactForm() {
                 </address>
               </div>
               <div>
-                <h3 className="font-semibold text-pub-wood-800 mb-2">Phone</h3>
-                <a
-                  href="tel:+353-1-XXX-XXXX"
-                  className="text-pub-green-700 hover:text-pub-green-800"
-                >
-                  {/* TODO: Replace with actual phone number */}
-                  (01) XXX XXXX
-                </a>
-              </div>
-              <div>
                 <h3 className="font-semibold text-pub-wood-800 mb-2">Email</h3>
                 <a
                   href="mailto:gogginspub@gmail.com"

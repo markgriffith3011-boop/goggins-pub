@@ -64,7 +64,6 @@ export default function RootLayout({
               name: 'Goggins of Monkstown',
               description: 'A third-generation family pub rooted in character, warmth and tradition.',
               url: 'https://gogginspub.com',
-              telephone: '+353-1-XXX-XXXX',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '99 Monkstown Rd',
