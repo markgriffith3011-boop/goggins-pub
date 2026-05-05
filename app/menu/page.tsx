@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
 import menuData from '@/data/menu.json'
 
+type MenuSection = {
+  name: string
+  note?: string
+  items: { name: string; description: string; price: string }[]
+}
+
 export const metadata: Metadata = {
   title: 'Menu | Goggins of Monkstown',
   description: 'Browse our menu featuring pub classics, snacks, and traditional Irish fare.',
@@ -22,6 +28,16 @@ export default function Menu() {
         </div>
       </section>
 
+      {/* Coming Soon Banner */}
+      <section className="bg-pub-wood-500/10 border-b border-pub-wood-400/30 py-5">
+        <div className="container-custom text-center">
+          <p className="font-sans text-sm text-pub-wood-600 tracking-wide">
+            <span className="font-medium">Our new full menu is coming soon.</span>{' '}
+            In the meantime, enjoy our pub classics and drinks selection below.
+          </p>
+        </div>
+      </section>
+
       {/* Intro */}
       <section className="py-14 bg-white border-b border-pub-cream-200">
         <div className="container-custom text-center max-w-2xl mx-auto">
@@ -36,7 +52,7 @@ export default function Menu() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto space-y-16">
-            {menuData.sections.map((section, sectionIdx) => (
+            {(menuData.sections as MenuSection[]).map((section, sectionIdx) => (
               <div key={sectionIdx}>
                 {/* Section heading with ornamental rule */}
                 <div className="flex items-center gap-4 mb-8">
@@ -46,6 +62,12 @@ export default function Menu() {
                   </h2>
                   <div className="flex-1 h-px bg-pub-cream-200" />
                 </div>
+
+                {section.note && (
+                  <p className="text-sm text-pub-wood-500 font-light italic mb-6 text-center">
+                    {section.note}
+                  </p>
+                )}
 
                 <div className="space-y-0 divide-y divide-pub-cream-200">
                   {section.items.map((item, itemIdx) => (

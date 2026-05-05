@@ -2,6 +2,7 @@
   "sections": [
     {
       "name": "Pub Classics",
+      "note": "Full food menu coming soon — ask our staff for today's specials.",
       "items": [
         {
           "name": "Toasted Special",
@@ -39,7 +40,77 @@
           "price": "€3.50"
         }
       ]
+    },
+    {
+      "name": "Draught",
+      "items": [
+        {
+          "name": "Guinness",
+          "description": "The one and only. A perfect pint, poured slowly, served right.",
+          "price": "€6.50"
+        },
+        {
+          "name": "Heineken",
+          "description": "Crisp, cold lager on draught.",
+          "price": "€6.20"
+        },
+        {
+          "name": "Hop House 13",
+          "description": "Smooth Irish lager with a hint of citrus and tropical hop character.",
+          "price": "€6.20"
+        },
+        {
+          "name": "Smithwick's",
+          "description": "Ireland's favourite amber ale — malty, smooth and reliable.",
+          "price": "€6.00"
+        }
+      ]
+    },
+    {
+      "name": "Spirits & Wine",
+      "note": "Ask at the bar for our full spirits selection.",
+      "items": [
+        {
+          "name": "Irish Whiskey",
+          "description": "Jameson, Proper Twelve, Teeling and more. Ask your barman for the full range.",
+          "price": "From €5.50"
+        },
+        {
+          "name": "Gin & Tonic",
+          "description": "House gin with Fever-Tree tonic, garnished to order.",
+          "price": "From €7.50"
+        },
+        {
+          "name": "Vodka",
+          "description": "House vodka served straight, with mixer or over ice.",
+          "price": "From €5.50"
+        },
+        {
+          "name": "House Wine",
+          "description": "Red, white or rosé — ask at the bar for today's selection.",
+          "price": "Glass from €6.50"
+        }
+      ]
+    },
+    {
+      "name": "Soft Drinks & Hot",
+      "items": [
+        {
+          "name": "Soft Drinks",
+          "description": "Coca-Cola, 7UP, Club Orange, Sparkling Water, Still Water.",
+          "price": "€3.00"
+        },
+        {
+          "name": "Juices",
+          "description": "Orange, apple or cranberry.",
+          "price": "€3.50"
+        },
+        {
+          "name": "Tea or Coffee",
+          "description": "Freshly brewed tea or filter coffee. Milk available.",
+          "price": "€3.50"
+        }
+      ]
     }
   ]
 }
-

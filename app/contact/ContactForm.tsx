@@ -7,7 +7,7 @@ import hoursData from '@/data/hours.json'
 const formatHours = () => {
   const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
   const dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-  
+
   return dayNames.map((day, idx) => {
     const dayKey = days[idx] as keyof typeof hoursData
     const hours = hoursData[dayKey]
@@ -27,9 +27,10 @@ export default function ContactForm() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
 
   useEffect(() => {
-    const type = searchParams.get('type')
     const space = searchParams.get('space')
     if (space) {
       setFormData((prev) => ({
@@ -39,22 +40,44 @@ export default function ContactForm() {
     }
   }, [searchParams])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        date: '',
-        time: '',
-        groupSize: '',
-        message: '',
+    setSubmitting(true)
+    setError(false)
+
+    try {
+      const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: 'New booking enquiry — Goggins',
+          _replyto: formData.email,
+          ...formData,
+        }),
       })
-    }, 3000)
+
+      if (response.ok) {
+        setSubmitted(true)
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          date: '',
+          time: '',
+          groupSize: '',
+          message: '',
+        })
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -108,7 +131,6 @@ export default function ContactForm() {
             {/* Map */}
             <div className="mt-8">
               <h3 className="font-semibold text-pub-wood-800 mb-4">Find Us</h3>
-              {/* TODO: Replace with actual Google Maps embed */}
               <div className="aspect-video bg-pub-wood-200 rounded-lg flex items-center justify-center">
                 <p className="text-pub-wood-600">Google Maps embed placeholder</p>
               </div>
@@ -123,7 +145,7 @@ export default function ContactForm() {
             {submitted ? (
               <div className="bg-pub-green-100 border border-pub-green-300 text-pub-green-800 p-6 rounded-lg">
                 <p className="font-semibold mb-2">Thank you for your message!</p>
-                <p>We&apos;ll get back to you as soon as possible.</p>
+                <p>We&apos;ll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -229,9 +251,21 @@ export default function ContactForm() {
                     className="w-full px-4 py-2 border border-pub-wood-300 rounded-md focus:ring-2 focus:ring-pub-green-500 focus:border-pub-green-500"
                   />
                 </div>
-                <button type="submit" className="btn-primary w-full">
-                  Send Message
+
+                {error && (
+                  <p className="text-sm text-red-600">
+                    Something went wrong. Please try again or email us directly at{' '}
+                    <a href="mailto:gogginspub@gmail.com" className="underline">gogginspub@gmail.com</a>.
+                  </p>
+                )}
+
+                <button type="submit" className="btn-primary w-full" disabled={submitting}>
+                  {submitting ? 'Sending…' : 'Send Message'}
                 </button>
+
+                <p className="text-xs text-pub-wood-500 text-center">
+                  We&apos;ll get back to you within 24 hours.
+                </p>
               </form>
             )}
           </div>
@@ -240,4 +274,3 @@ export default function ContactForm() {
     </section>
   )
 }
-

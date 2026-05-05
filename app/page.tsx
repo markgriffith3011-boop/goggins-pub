@@ -131,6 +131,93 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Live Music Strip */}
+      <section className="bg-pub-green-700 py-16 md:py-20">
+        <div className="container-custom">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex items-center gap-5">
+              {/* Music icon */}
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-10 h-10 text-pub-wood-400 flex-shrink-0">
+                <path d="M18 36V14l22-4v22" />
+                <circle cx="14" cy="36" r="4" />
+                <circle cx="36" cy="32" r="4" />
+              </svg>
+              <div>
+                <p className="font-sans text-xs uppercase tracking-widest text-pub-wood-300 mb-1">Every Weekend</p>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium text-white">Live Music at Goggins</h2>
+              </div>
+            </div>
+            <p className="text-white/70 font-light max-w-sm text-center md:text-right">
+              Live acts every Saturday night and trad sessions on Sunday afternoons.
+              Local talent, great atmosphere, and a proper Guinness.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sports Viewing */}
+      <section className="section-padding bg-pub-cream-100 border-t border-pub-cream-200">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex justify-center mb-6 text-pub-wood-500">
+              {/* TV/screen icon */}
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.2" className="w-12 h-12">
+                <rect x="4" y="8" width="40" height="28" rx="2" />
+                <path d="M16 42h16M24 36v6" />
+                <path d="M12 20l5 4-5 4M22 26h8" />
+              </svg>
+            </div>
+            <p className="font-sans text-xs uppercase tracking-widest text-pub-wood-500 mb-3">Big Screen Sports</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-medium text-pub-green-700 mb-4">
+              Never Miss a Match
+            </h2>
+            <div className="ornament-divider"><span>&#10022;</span></div>
+            <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed mb-6">
+              We show all major sports — GAA, rugby, soccer, and NFL. Whether it&apos;s the
+              All-Ireland Final or a Sunday Premier League fixture, pull up a stool and
+              watch it the right way: with a pint in hand.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mt-2">
+              {['GAA', 'Rugby', 'Soccer', 'NFL', 'Racing'].map((sport) => (
+                <span key={sport} className="font-sans text-xs uppercase tracking-widest px-4 py-2 border border-pub-cream-300 text-pub-wood-500">
+                  {sport}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's On Teaser */}
+      <section className="section-padding bg-white border-t border-pub-cream-200">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <p className="font-sans text-xs uppercase tracking-widest text-pub-wood-500 mb-3">Weekly Events</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-medium text-pub-green-700">What&rsquo;s On</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+            {[
+              { day: 'Thursday', name: 'Quiz Night', time: 'From 8.30pm', desc: 'Teams of up to 6. Prizes on the night. Book early — it fills up fast.' },
+              { day: 'Saturday', name: 'Live Music', time: 'From 9pm', desc: 'Local acts every week. Folk, rock, and everything in between.' },
+              { day: 'Sunday', name: 'Trad Session', time: 'From 3pm', desc: 'Traditional Irish music followed by live sports on the big screen.' },
+            ].map((event) => (
+              <div key={event.name} className="border border-pub-cream-200 p-7 text-center">
+                <p className="font-sans text-xs uppercase tracking-widest text-pub-wood-500 mb-3">{event.day}</p>
+                <h3 className="font-serif text-2xl font-medium text-pub-green-700 mb-3">{event.name}</h3>
+                <div className="w-8 h-px bg-pub-wood-400 mx-auto mb-4" />
+                <p className="text-pub-green-600 text-sm font-light leading-relaxed mb-4">{event.desc}</p>
+                <p className="font-sans text-xs uppercase tracking-wide text-pub-wood-500">{event.time}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link href="/events" className="btn-primary">
+              See Full Programme
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Private Events Banner */}
       <section className="bg-pub-green-700 text-white py-20 md:py-28">
         <div className="container-custom">
