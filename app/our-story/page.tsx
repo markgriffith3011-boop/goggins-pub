@@ -21,7 +21,7 @@ const timeline = [
   },
   {
     year: 'Recent years',
-    text: 'Trade declined after 2020 and the pub has been closed for the past two years. The closure was a necessary step to protect the family\'s ownership of the property — a decision that wasn\'t easy, but one made with the long-term future of Goggins in mind.',
+    text: 'Trade declined after 2020 and the pub has been closed for the past two years — a period needed to secure the future of the property and the business.',
   },
   {
     year: 'Today',
