@@ -9,19 +9,19 @@ export const metadata: Metadata = {
 const timeline = [
   {
     year: '1957',
-    text: 'Goggins first opened on Monkstown Road at a time when the village was a quieter, more working-class place — dockers, railway men, and families who\'d lived on the same streets for generations. The pub quickly became a fixture of daily life, the kind of place where you\'d stop in after a shift, catch up on the news, and know half the room by name.',
+    text: 'Goggins first opened on Monkstown Road under the Goggin family name, trading as Goggin & Co. Ltd. The village was a quieter, more working-class place back then — dockers, railway men, and families who\'d lived on the same streets for generations. The pub quickly became a fixture of daily life, the kind of place where you\'d stop in after a shift, catch up on the news, and know half the room by name.',
   },
   {
     year: '1970s',
-    text: 'Monkstown was changing — young families moving in, the old trades giving way to a more suburban feel. Goggins grew with it. The bar was extended and an upstairs lounge added, giving regulars more room and making it a proper venue for celebrations, club nights and get-togethers that had no other home.',
+    text: 'Monkstown was changing — young families moving in, the old trades giving way to a more suburban feel. Goggins grew with it. The bar was extended and an upstairs lounge added, giving the community more room for the celebrations, club nights and get-togethers that had no other home.',
   },
   {
-    year: '2000s',
-    text: 'A new era of renovation brought fresh energy without losing what made the place. The snugs stayed. The timber stayed. The second and third generations of the family kept the same warmth that had always defined it, while opening the doors to a new crowd — a more mixed, more lively Monkstown that had discovered what the locals always knew.',
+    year: '1999',
+    text: 'The pub passed into the hands of a new generation when the current owner\'s father took over. He renovated throughout, breathing fresh life into the place while keeping its soul intact — the snugs, the timber, the welcome. Under his watch Goggins found a new crowd while holding onto the regulars who\'d been coming for decades.',
   },
   {
     year: 'Today',
-    text: 'Goggins is in good hands. Under new family management, it\'s gone back to its roots — live music at weekends, sport on the screens, a proper pint and a genuine welcome. Nearly seventy years on from that first opening, it\'s still the same pub at heart: a place where Monkstown comes together.',
+    text: 'Now Mark and Kate are doing it all over again. Taking on a pub is never the easy road, but Goggins is worth it. They\'ve gone back to what made the place — live music at weekends, sport on the screens, a proper pint and a door that\'s open to everyone. Nearly seventy years on from that first licence, the same spirit is very much alive.',
   },
 ]
 
