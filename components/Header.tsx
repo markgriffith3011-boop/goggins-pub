@@ -3,16 +3,13 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
-import CartIcon from './CartIcon'
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/our-story', label: 'Our Story' },
   { href: '/spaces', label: 'Spaces' },
-  { href: '/gallery', label: 'Gallery' },
   { href: '/events', label: "What's On" },
   { href: '/menu', label: 'Menu' },
-  { href: '/shop', label: 'Shop' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -54,9 +51,8 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Right side: Cart + CTA */}
+          {/* Right side: CTA */}
           <div className="hidden lg:flex items-center space-x-6">
-            <CartIcon />
             <Link href="/contact?type=booking" className="btn-primary py-2.5 px-6 text-xs">
               Book a Table
             </Link>
@@ -64,7 +60,6 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center space-x-4">
-            <CartIcon />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-pub-green-700 hover:text-pub-wood-500"
