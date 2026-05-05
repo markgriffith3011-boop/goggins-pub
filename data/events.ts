@@ -9,10 +9,10 @@ export type WeeklyEvent = {
 export const weeklyEvents: WeeklyEvent[] = [
   {
     day: 'Monday',
-    name: 'Poker Night',
-    description: "Friendly Texas Hold'em from 8pm. All welcome — beginners and regulars alike. Ask at the bar to join a table.",
-    time: 'From 8pm',
-    tag: 'Games',
+    name: 'Monday Night Out',
+    description: 'Start the week right. A quieter night at the bar — perfect for catching up with friends or winding down after the day.',
+    time: 'From 5pm',
+    tag: 'Social',
   },
   {
     day: 'Tuesday',
@@ -59,7 +59,6 @@ export const weeklyEvents: WeeklyEvent[] = [
 ]
 
 export const tagColours: Record<WeeklyEvent['tag'], string> = {
-  'Games': 'bg-pub-cream-200 text-pub-green-700',
   'Food & Drink': 'bg-pub-cream-200 text-pub-green-700',
   'Entertainment': 'bg-pub-wood-500/10 text-pub-wood-600',
   'Social': 'bg-pub-cream-200 text-pub-green-700',
