@@ -10,13 +10,24 @@ export default function Menu() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="relative h-[400px] flex items-center justify-center bg-gradient-to-r from-pub-green-900 to-pub-green-700">
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-4">
+      <section className="relative h-[320px] flex items-end bg-pub-green-700">
+        <div className="absolute inset-0 bg-pub-green-700" />
+        <div className="relative z-10 container-custom pb-12 w-full">
+          <p className="font-sans text-xs uppercase tracking-widest text-pub-wood-300 mb-3">
+            Food &amp; Drink
+          </p>
+          <h1 className="font-serif text-5xl md:text-6xl font-medium text-white">
             Our Menu
           </h1>
-          <p className="text-xl md:text-2xl text-pub-cream-100">
-            Classic pub fare with Irish character
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="py-14 bg-white border-b border-pub-cream-200">
+        <div className="container-custom text-center max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed">
+            Classic pub fare with Irish character. Menu items subject to availability —
+            please ask our staff about dietary requirements.
           </p>
         </div>
       </section>
@@ -24,46 +35,43 @@ export default function Menu() {
       {/* Menu Sections */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-3xl mx-auto space-y-16">
             {menuData.sections.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h2 className="font-serif text-4xl font-bold text-pub-green-800 mb-8 text-center">
-                  {section.name}
-                </h2>
-                <div className="space-y-6">
+                {/* Section heading with ornamental rule */}
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="flex-1 h-px bg-pub-cream-200" />
+                  <h2 className="font-serif text-3xl font-medium text-pub-green-700 text-center whitespace-nowrap">
+                    {section.name}
+                  </h2>
+                  <div className="flex-1 h-px bg-pub-cream-200" />
+                </div>
+
+                <div className="space-y-0 divide-y divide-pub-cream-200">
                   {section.items.map((item, itemIdx) => (
                     <div
                       key={itemIdx}
-                      className="bg-pub-cream-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                      className="flex justify-between items-baseline gap-6 py-5"
                     >
-                      <div className="flex justify-between items-start mb-2">
-                        <h3 className="font-serif text-2xl font-bold text-pub-green-800">
+                      <div className="flex-1">
+                        <h3 className="font-serif text-xl font-medium text-pub-green-700 mb-1">
                           {item.name}
                         </h3>
-                        <span className="text-lg font-semibold text-pub-wood-700">
-                          {item.price}
-                        </span>
+                        <p className="text-sm text-pub-green-600 font-light leading-relaxed">
+                          {item.description}
+                        </p>
                       </div>
-                      <p className="text-pub-wood-700 leading-relaxed">
-                        {item.description}
-                      </p>
+                      <span className="font-sans text-sm font-medium text-pub-wood-500 whitespace-nowrap">
+                        {item.price}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
             ))}
           </div>
-
-          {/* Note */}
-          <div className="max-w-4xl mx-auto mt-12 text-center text-pub-wood-600 italic">
-            <p>
-              {/* TODO: Add menu update note or dietary information */}
-              Menu items subject to availability. Please ask our staff about dietary requirements.
-            </p>
-          </div>
         </div>
       </section>
     </div>
   )
 }
-
