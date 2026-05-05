@@ -3,25 +3,25 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Our Story | Goggins of Monkstown',
-  description: 'Discover the history of Goggins of Monkstown, a third-generation family pub that has been a South Dublin institution since 1935.',
+  description: 'Some pubs are just places to drink. Goggins is a place to belong. The story of a third-generation family pub on Monkstown Road since 1935.',
 }
 
 const timeline = [
   {
     year: '1935',
-    text: 'Goggins opens on Monkstown Road, establishing itself as a local meeting place in the heart of the community.',
+    text: 'Goggins opens its doors on Monkstown Road. Monkstown is a village of fishermen, railway workers and seaside day-trippers. The pub becomes what all good pubs become: the living room the neighbourhood never knew it needed.',
   },
   {
     year: '1970s',
-    text: 'Expanded bar area and added upstairs lounge, creating more space for gatherings and events.',
+    text: 'A growing community calls for more room. The bar expands, the upstairs lounge takes shape. More tables, more rounds, more nights that stretch well past closing time — at least in memory.',
   },
   {
     year: '2000s',
-    text: 'Renovations retaining original features, preserving the pub\'s character while modernising facilities.',
+    text: 'Careful renovations keep the bones intact. The worn timber, the snug corners, the particular slant of afternoon light through the front windows — none of it touched. Some things are worth preserving exactly as they are.',
   },
   {
     year: 'Today',
-    text: 'A revitalised family-led third-generation pub, continuing the tradition of warm hospitality and community connection.',
+    text: 'The third generation takes the reins. The pints are as good as they\'ve ever been, the welcome is the same, and the door on Monkstown Road is still open to anyone who walks through it.',
   },
 ]
 
@@ -54,15 +54,15 @@ export default function OurStory() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="ornament-divider mb-10"><span>&#10022;</span></div>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed mb-6">
-              Goggins of Monkstown began as a small local meeting place on the Road
-              and grew into one of Dublin&apos;s most recognisable suburban pubs. Through the
-              decades, it has remained a family-run business with a commitment to community,
-              hospitality and tradition.
+              Some pubs are just places to drink. Goggins is a place to belong.
+              Tucked into the curve of Monkstown Road, a short walk from the sea, it
+              has been holding court since 1935 — through booms and recessions, through
+              funerals and christenings, through the quiet Tuesday nights that are
+              somehow the best ones.
             </p>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed">
-              Today, Goggins blends its heritage charm with a bright modern feel, serving
-              locals, sports fans, weekend strollers and visitors who appreciate a proper
-              Irish pub experience just minutes from the sea.
+              Three generations of the same family. Nearly a century of the same corner.
+              The faces change, the pints stay cold, and the door is always open.
             </p>
           </div>
         </div>
