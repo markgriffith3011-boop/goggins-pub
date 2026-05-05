@@ -56,6 +56,15 @@ const featuredEvents = weeklyEvents.filter((e) => featuredEventDays.includes(e.d
 export default function Home() {
   return (
     <>
+      {/* Reopening Announcement Bar */}
+      <div className="bg-pub-wood-500 text-white py-3 px-4 text-center">
+        <p className="font-sans text-xs md:text-sm uppercase tracking-widest">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/70 mr-3 mb-0.5 animate-pulse" />
+          Goggins is coming back &mdash; reopening Summer 2026
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/70 ml-3 mb-0.5 animate-pulse" />
+        </p>
+      </div>
+
       {/* Hero Section */}
       <section className="relative h-[620px] md:h-[760px] flex items-end">
         <div className="absolute inset-0">
@@ -78,15 +87,18 @@ export default function Home() {
               <h1 className="font-serif text-5xl md:text-7xl font-medium text-white mb-4 leading-tight">
                 Goggins of Monkstown
               </h1>
-              <p className="font-serif italic text-xl md:text-2xl text-white/90 mb-10 max-w-xl">
+              <p className="font-serif italic text-xl md:text-2xl text-white/90 mb-4 max-w-xl">
                 A South Dublin institution since 1957.
               </p>
+              <p className="font-sans text-sm uppercase tracking-widest text-pub-wood-300 mb-10">
+                Reopening Summer 2026 &mdash; watch this space
+              </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/menu" className="btn-light">
-                  Menus
+                <Link href="/our-story" className="btn-light">
+                  Our Story
                 </Link>
                 <Link href="/contact?type=booking" className="btn-light">
-                  Make a Booking
+                  Register Interest
                 </Link>
               </div>
             </div>
@@ -111,6 +123,28 @@ export default function Home() {
               a place where locals gather, friends reconnect, and visitors discover
               a true Dublin pub experience.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Reopening Hype Banner */}
+      <section className="bg-pub-green-700 py-16 md:py-20 border-t border-pub-green-800">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="font-sans text-xs uppercase tracking-widest text-pub-wood-300 mb-4">
+              Coming Soon
+            </p>
+            <h2 className="font-serif text-4xl md:text-6xl font-medium text-white mb-6 leading-tight">
+              Back Open This Summer
+            </h2>
+            <div className="w-16 h-px bg-pub-wood-400 mx-auto mb-6" />
+            <p className="text-base md:text-lg text-white/80 font-light mb-10 max-w-xl mx-auto">
+              After two years, Goggins is returning under new family management.
+              Same address, same soul — refreshed and ready for Monkstown.
+            </p>
+            <Link href="/contact?type=booking" className="btn-outline-gold">
+              Register Your Interest &rarr;
+            </Link>
           </div>
         </div>
       </section>
