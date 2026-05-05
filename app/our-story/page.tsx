@@ -122,15 +122,26 @@ export default function OurStory() {
                         {item.text}
                       </p>
                       {item.images && (
-                        <div className="grid grid-cols-3 gap-2 mt-4">
-                          {item.images.map((src, i) => (
+                        <div className="mt-6 grid grid-cols-2 gap-2">
+                          {/* Large image — spans full height on the left */}
+                          <div className="relative row-span-2 aspect-[3/4] overflow-hidden">
+                            <Image
+                              src={item.images[0]}
+                              alt={`Goggins ${item.year} — photo 1`}
+                              fill
+                              className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                              sizes="(max-width: 768px) 50vw, 300px"
+                            />
+                          </div>
+                          {/* Two smaller images stacked on the right */}
+                          {item.images.slice(1).map((src, i) => (
                             <div key={i} className="relative aspect-[4/3] overflow-hidden">
                               <Image
                                 src={src}
-                                alt={`Goggins ${item.year} — photo ${i + 1}`}
+                                alt={`Goggins ${item.year} — photo ${i + 2}`}
                                 fill
                                 className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                                sizes="(max-width: 768px) 33vw, 200px"
+                                sizes="(max-width: 768px) 50vw, 300px"
                               />
                             </div>
                           ))}
