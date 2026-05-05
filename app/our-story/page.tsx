@@ -9,15 +9,19 @@ export const metadata: Metadata = {
 const timeline = [
   {
     year: '1957',
-    text: 'Goggins first opened on Monkstown Road under the Goggin family name, trading as Goggin & Co. Ltd. The village was a quieter, more working-class place back then — dockers, railway men, and families who\'d lived on the same streets for generations. The pub quickly became a fixture of daily life, the kind of place where you\'d stop in after a shift, catch up on the news, and know half the room by name.',
+    text: 'Goggins first opened on Monkstown Road under the Goggin family name, trading as Goggin & Co. Ltd. The village was a quieter, more working-class place back then — dockers, railway men, and families who\'d lived on the same streets for generations. The pub quickly became a fixture of daily life: the place you stopped after a shift, caught up on the news, and knew half the room by name.',
   },
   {
     year: '1970s',
-    text: 'Monkstown was changing — young families moving in, the old trades giving way to a more suburban feel. Goggins grew with it. The bar was extended and an upstairs lounge added, giving the community more room for the celebrations, club nights and get-togethers that had no other home.',
+    text: 'The second generation took the reins when the current owner\'s grandfather stepped in. He saw the potential and ran with it — extending the bar, building out the upstairs lounge, and turning Goggins into a proper local institution. Under his watch the pub became the heartbeat of the area: GAA clubs meeting upstairs, christenings in the lounge, Friday nights three deep at the bar.',
+  },
+  {
+    year: '1980s – 90s',
+    text: 'These were the roaring years. Goggins was packed most nights — sport on the screens, live music at weekends, a crowd that spilled out onto Monkstown Road on a good Friday. The regulars became part of the furniture, the staff knew everyone\'s order, and the pub earned its reputation as one of the best in South Dublin. Good times, well remembered.',
   },
   {
     year: '1999',
-    text: 'The pub passed into the hands of a new generation when the current owner\'s father took over. He renovated throughout, breathing fresh life into the place while keeping its soul intact — the snugs, the timber, the welcome. Under his watch Goggins found a new crowd while holding onto the regulars who\'d been coming for decades.',
+    text: 'The third generation arrived when the current owner\'s father took over and put his own stamp on the place. A full renovation — but done with care. The character stayed. The timber, the snugs, the feeling of the place. He brought it into a new era without losing what made it worth keeping.',
   },
   {
     year: 'Today',
