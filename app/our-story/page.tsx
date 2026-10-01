@@ -32,7 +32,7 @@ const timeline: TimelineEntry[] = [
   },
   {
     year: 'Today',
-    text: 'Goggins is reopening under new family management. The aim is simple: restore what made the pub worth coming to in the first place, and give Monkstown back its local.',
+    text: 'Goggins reopens on 1st December 2026 under new family management. The aim is simple: restore what made the pub worth coming to in the first place, and give Monkstown back its local.',
   },
 ]
 

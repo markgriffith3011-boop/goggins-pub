@@ -60,7 +60,7 @@ export default function Home() {
       <div className="bg-pub-wood-500 text-white py-3 px-4 text-center">
         <p className="font-sans text-xs md:text-sm uppercase tracking-widest">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/70 mr-3 mb-0.5 animate-pulse" />
-          Goggins is coming back &mdash; reopening Summer 2026
+          Goggins is coming back &mdash; reopening 1st December 2026
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/70 ml-3 mb-0.5 animate-pulse" />
         </p>
       </div>
@@ -91,7 +91,7 @@ export default function Home() {
                 A South Dublin institution since 1957.
               </p>
               <p className="font-sans text-sm uppercase tracking-widest text-pub-wood-300 mb-10">
-                Reopening Summer 2026 &mdash; watch this space
+                Doors open 1st December 2026
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/our-story" className="btn-light">
@@ -135,7 +135,7 @@ export default function Home() {
               Coming Soon
             </p>
             <h2 className="font-serif text-4xl md:text-6xl font-medium text-white mb-6 leading-tight">
-              Back Open This Summer
+              Back Open 1st December
             </h2>
             <div className="w-16 h-px bg-pub-wood-400 mx-auto mb-6" />
             <p className="text-base md:text-lg text-white/80 font-light mb-10 max-w-xl mx-auto">
