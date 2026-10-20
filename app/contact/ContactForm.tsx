@@ -6,6 +6,8 @@ import hoursData from '@/data/hours.json'
 
 type Status = 'idle' | 'submitting' | 'success' | 'error'
 
+const CONTACT_EMAIL = 'info@gogginspub.com'
+
 const EMPTY_FORM = {
   name: '',
   email: '',
@@ -41,30 +43,26 @@ export default function ContactForm() {
     }
   }, [searchParams])
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('submitting')
 
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          _subject: 'New booking enquiry — Goggins',
-          _replyto: formData.email,
-          ...formData,
-        }),
-      })
+      const subject = `Booking enquiry — ${formData.name}`
+      const details: string[] = [`Name: ${formData.name}`, `Email: ${formData.email}`]
+      if (formData.phone) details.push(`Phone: ${formData.phone}`)
+      if (formData.date) details.push(`Date: ${formData.date}`)
+      if (formData.time) details.push(`Time: ${formData.time}`)
+      if (formData.groupSize) details.push(`Group size: ${formData.groupSize}`)
+      const lines = [...details, '', formData.message]
 
-      if (response.ok) {
-        setStatus('success')
-        setFormData(EMPTY_FORM)
-      } else {
-        setStatus('error')
-      }
+      const mailto =
+        `mailto:${CONTACT_EMAIL}` +
+        `?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(lines.join('\n'))}`
+
+      window.location.href = mailto
+      setStatus('success')
     } catch {
       setStatus('error')
     }
@@ -131,8 +129,20 @@ export default function ContactForm() {
             </h2>
             {status === 'success' ? (
               <div className="bg-pub-green-100 border border-pub-green-300 text-pub-green-800 p-6 rounded-lg">
-                <p className="font-semibold mb-2">Thank you for your message!</p>
-                <p>We&apos;ll get back to you within 24 hours.</p>
+                <p className="font-semibold mb-2">Nearly there — your email app should now be open.</p>
+                <p className="mb-3">
+                  Your message is ready to go to {CONTACT_EMAIL}. Just press <strong>Send</strong> in your
+                  email app and we&apos;ll get back to you within 24 hours.
+                </p>
+                <p className="text-sm">
+                  Email app didn&apos;t open?{' '}
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="underline">Email us directly</a>{' '}
+                  or{' '}
+                  <button type="button" onClick={() => setStatus('idle')} className="underline">
+                    go back to the form
+                  </button>
+                  .
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -247,11 +257,11 @@ export default function ContactForm() {
                 )}
 
                 <button type="submit" className="btn-primary w-full" disabled={status === 'submitting'}>
-                  {status === 'submitting' ? 'Sending…' : 'Send Message'}
+                  {status === 'submitting' ? 'Opening your email…' : 'Send Message'}
                 </button>
 
                 <p className="text-xs text-pub-wood-500 text-center">
-                  We&apos;ll get back to you within 24 hours.
+                  This opens your email app with your message ready to send. We&apos;ll get back to you within 24 hours.
                 </p>
               </form>
             )}
