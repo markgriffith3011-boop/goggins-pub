@@ -49,7 +49,7 @@ const features = [
   },
 ]
 
-const sportsTags = ['GAA', 'Rugby', 'Soccer', 'NFL', 'Racing']
+const sportsTags = ['GAA', 'Rugby', 'Soccer', 'Racing']
 
 const featuredEvents = weeklyEvents.filter((e) => featuredEventDays.includes(e.day))
 
@@ -210,7 +210,7 @@ export default function Home() {
             </h2>
             <div className="ornament-divider"><span>&#10022;</span></div>
             <p className="text-base md:text-lg text-pub-green-600 font-light leading-relaxed mb-6">
-              We show all major sports — GAA, rugby, soccer, and NFL. Whether it&apos;s the
+              We show all major sports — GAA, rugby, soccer and racing. Whether it&apos;s the
               All-Ireland Final or a Sunday Premier League fixture, pull up a stool and
               watch it the right way: with a pint in hand.
             </p>
