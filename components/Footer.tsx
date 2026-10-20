@@ -50,8 +50,8 @@ export default function Footer() {
               <p>Dún Laoghaire, Dublin, A94 Y8D8</p>
               <p>Ireland</p>
               <p className="mt-4">
-                <a href="mailto:gogginspub@gmail.com" className="hover:text-white transition-colors">
-                  gogginspub@gmail.com
+                <a href="mailto:info@gogginspub.com" className="hover:text-white transition-colors">
+                  info@gogginspub.com
                 </a>
               </p>
             </address>

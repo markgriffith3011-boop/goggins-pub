@@ -100,10 +100,10 @@ export default function ContactForm() {
               <div>
                 <h3 className="font-semibold text-pub-wood-800 mb-2">Email</h3>
                 <a
-                  href="mailto:gogginspub@gmail.com"
+                  href="mailto:info@gogginspub.com"
                   className="text-pub-green-700 hover:text-pub-green-800"
                 >
-                  gogginspub@gmail.com
+                  info@gogginspub.com
                 </a>
               </div>
               <div>
@@ -242,7 +242,7 @@ export default function ContactForm() {
                 {status === 'error' && (
                   <p className="text-sm text-red-600">
                     Something went wrong. Please try again or email us directly at{' '}
-                    <a href="mailto:gogginspub@gmail.com" className="underline">gogginspub@gmail.com</a>.
+                    <a href="mailto:info@gogginspub.com" className="underline">info@gogginspub.com</a>.
                   </p>
                 )}
 
