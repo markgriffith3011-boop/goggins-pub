@@ -196,6 +196,8 @@
   .aside-card h3 { color: #F5EFE3; font-size: 24px; margin-bottom: 10px; }
   .aside-card p + p, .aside-card p + h3 { margin-top: 14px; }
 
+  .spaces-note { border: 1.5px solid var(--gilt); background: #fff; padding: 18px 22px; margin-bottom: 36px; display: grid; gap: 8px; max-width: 760px; }
+  .spaces-note a { color: var(--wine); }
   footer { background: var(--wine-deep); color: #E3D2BE; padding-block: 56px 32px; }
   .foot { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 36px; }
   .foot .logo { width: 210px; }
@@ -413,7 +415,9 @@
   <!-- SPACES -->
   <div data-page="spaces" hidden>
     <section class="page-head"><div class="wrap"><p class="eyebrow">Private hire</p><h1>Rooms & spaces</h1><p class="sub">From a table in the front bar to the whole lounge upstairs. Christmas dates are open now.</p></div></section>
-    <section class="band"><div class="wrap" id="spaces"></div></section>
+    <section class="band"><div class="wrap">
+      <div class="spaces-note"><p class="eyebrow">Coming soon</p><p>We've just refurbished, and new photos and a brochure for our rooms are on the way. Want to see a room before you book? Email <a href="mailto:info@gogginspub.com">info@gogginspub.com</a> and we'll arrange a viewing.</p></div>
+      <div id="spaces"></div></div></section>
   </div>
 
   <!-- BOOK -->
@@ -498,7 +502,7 @@
     $('story-intro').innerHTML = G.storyIntro.map((p) => `<p>${esc(p)}</p>`).join('');
     $('timeline').innerHTML = G.timeline.map((t) => `<div class="t-item"><span class="yr">${esc(t.year)}</span><div><p>${esc(t.text)}</p>${t.images ? `<div class="t-photos">${t.images.map((src, n) => `<figure><img src="${src}" alt="Goggins in the ${esc(t.year)}, photo ${n + 1}" loading="lazy"></figure>`).join('')}</div>` : ''}</div></div>`).join('');
 
-    $('spaces').innerHTML = G.spaces.map((s) => `<article class="space"><div class="space-img">${s.img ? `<img src="${s.img}" alt="${esc(s.name)}" loading="lazy">` : `<div class="ph">Photo needed<br>${esc(s.name)}</div>`}</div><div class="space-body"><p class="eyebrow">${esc(s.cap)}</p><h2>${esc(s.name)}</h2><p>${esc(s.text)}</p><div class="btn-row"><a class="btn btn-ink" href="#book">Enquire</a></div></div></article>`).join('');
+    $('spaces').innerHTML = G.spaces.map((s) => `<article class="space"><div class="space-img">${s.img ? `<img src="${s.img}" alt="${esc(s.name)}" loading="lazy">` : `<div class="ph">New photos<br>coming soon</div>`}</div><div class="space-body"><p class="eyebrow">${esc(s.cap)}</p><h2>${esc(s.name)}</h2><p>${esc(s.text)}</p><div class="btn-row"><a class="btn btn-ink" href="#book">Enquire</a></div></div></article>`).join('');
 
     const addr = G.address.map(esc).join('<br>');
     const hours = G.hours.map((h) => `<tr><td>${h[0]}</td><td>${h[1]} – ${h[2]}</td></tr>`).join('');
