@@ -33,3 +33,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# private working folders - never upload
+/aib-account-opening/
+/Claude outputs/
+.claude/
+/.cursor/
