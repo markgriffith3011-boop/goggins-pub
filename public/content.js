@@ -59,8 +59,8 @@ window.GOGGINS = {
 
   weekly: [
     ['Monday', 'Quiet Monday', 'The easy start to the week. Fire on, papers out.', 'From 5pm'],
-    ['Tuesday', 'Kitchen Specials', 'A changing special from the kitchen. Starts January.', 'All day'],
-    ['Wednesday', 'Wine & Dine', 'Bottle of house wine with two mains. Starts January.', 'From 5pm'],
+    ['Tuesday', 'Kitchen Specials', 'A changing special from the kitchen, once food starts.', ''],
+    ['Wednesday', 'Wine & Dine', 'Bottle of house wine with two mains, once food starts.', 'From 5pm'],
     ['Thursday', 'Quiz Night', 'Teams of up to six. Book a table, it fills up.', '8.30pm'],
     ['Friday', 'After Work', 'Doors open at 3pm and a full bar by six.', 'From 3pm'],
     ['Saturday', 'Live Music', 'Local acts, from folk to covers.', 'From 9pm'],
@@ -87,7 +87,7 @@ window.GOGGINS = {
   spaces: [
     { name: 'Front Bar', cap: 'Walk-ins', img: '/img/bar.jpg', text: 'Warm wood, classic snugs and daylight from Monkstown Road. The heart of the pub for a casual pint.' },
     { name: 'The Snug', cap: 'Up to 8', img: null, text: 'A quiet corner away from the main bar for a small group or a long chat.' },
-    { name: 'Upstairs Lounge', cap: '25–40 people', img: null, text: 'Bright, flexible room for birthdays, Christmas parties, christenings and work drinks. Drinks packages on request. Food from January.' },
+    { name: 'Upstairs Lounge', cap: '25–40 people', img: null, text: 'Bright, flexible room for birthdays, Christmas parties, christenings and work drinks. Drinks packages on request. Food is likely from January.' },
   ],
 
   outstanding: [

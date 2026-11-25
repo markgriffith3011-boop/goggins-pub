@@ -301,7 +301,7 @@
           <div data-when="after" hidden>
             <p class="eyebrow" style="color:var(--gilt)" data-today></p>
             <h1 style="margin-top:14px">Your local on Monkstown Road since 1957.</h1>
-            <p class="lede">Pints, the match on and a seat by the window. Food from January.</p>
+            <p class="lede">Pints, the match on and a seat by the window. Food is likely from January.</p>
             <div class="btn-row">
               <a class="btn btn-gilt" href="#book">Book a table</a>
               <a class="btn btn-line" href="#whatson">What's on this week</a>
@@ -361,7 +361,7 @@
           <div class="card-gilt">
             <p class="eyebrow">Christmas parties</p>
             <h3 style="margin-top:12px">Upstairs is taking bookings</h3>
-            <p>The lounge takes 25 to 40. Drinks packages available. Food from January.</p>
+            <p>The lounge takes 25 to 40. Drinks packages available. Food is likely from January.</p>
             <div class="btn-row"><a class="btn btn-gilt" href="#spaces">See the rooms</a></div>
           </div>
           <div class="card-gilt">
@@ -403,7 +403,7 @@
 
   <!-- MENU -->
   <div data-page="menu" hidden>
-    <section class="page-head"><div class="wrap"><p class="eyebrow">Food & drink</p><h1>The menu</h1><p class="sub">The bar opens on Tuesday 1 December. Our kitchen opens in January 2027.</p></div></section>
+    <section class="page-head"><div class="wrap"><p class="eyebrow">Food & drink</p><h1>The menu</h1><p class="sub">The bar opens on Tuesday 1 December. Food will likely not be served until January.</p></div></section>
     <section class="band"><div class="wrap menu-grid" id="menu"></div></section>
   </div>
 
@@ -411,7 +411,7 @@
   <div data-page="whatson" hidden>
     <section class="page-head"><div class="wrap"><p class="eyebrow">Music, quiz & sport</p><h1>What's on</h1><p class="sub">Sample programme. Final nights to be confirmed before opening.</p></div></section>
     <section class="band"><div class="wrap"><div class="head-row"><div><p class="eyebrow">Opening month</p><h2>December 2026</h2></div></div><ul class="notice" id="wo-dec"></ul></div></section>
-    <section class="band paper-2"><div class="wrap"><div class="head-row"><div><p class="eyebrow">Every week</p><h2>The weekly programme</h2></div></div><ul class="notice" id="wo-week"></ul></div></section>
+    <section class="band paper-2"><div class="wrap"><div class="head-row"><div><p class="eyebrow">Every week</p><h2>The weekly programme</h2></div></div><div class="spaces-note"><p class="eyebrow">Please note</p><p>Food will likely not be served until January, so Kitchen Specials and Wine &amp; Dine start then. The bar is open from 1 December.</p></div><ul class="notice" id="wo-week"></ul></div></section>
     <section class="band on-wine"><div class="wrap"><div class="head-row"><div><p class="eyebrow">On the big screen</p><h2>Sport at Goggins</h2></div></div><ul class="notice" id="wo-sport"></ul></div></section>
   </div>
 
@@ -500,7 +500,7 @@
     $('wo-sport').innerHTML = notice(G.sports.map((s) => ['Sample', s[0], s[1], s[2]]));
 
     const item = (i) => `<li><div class="line"><h3>${esc(i[0])}</h3><span class="dots"></span><b>${esc(i[2])}</b></div><p>${esc(i[1])}</p></li>`;
-        $('menu').innerHTML = `<div style="grid-column:1/-1;text-align:center;max-width:52ch;margin:0 auto;padding:24px 0"><h2 style="font-size:clamp(28px,3.4vw,38px)">Food from January</h2><p style="margin-top:14px;opacity:.85">We won't be serving food until January 2027. The bar is open from 1 December with a full range of drinks. Join the mailing list and we'll send you the food menu first.</p><div style="margin-top:24px;display:flex;justify-content:center"><a class="btn btn-ink" href="#home">Join the mailing list</a></div></div>`;
+        $('menu').innerHTML = `<div style="grid-column:1/-1;text-align:center;max-width:52ch;margin:0 auto;padding:24px 0"><h2 style="font-size:clamp(28px,3.4vw,38px)">Food is on the way</h2><p style="margin-top:14px;opacity:.85">Food will likely not be served until January. The bar is open from 1 December with a full range of drinks. Join the mailing list and we'll send you the food menu first.</p><div style="margin-top:24px;display:flex;justify-content:center"><a class="btn btn-ink" href="#home">Join the mailing list</a></div></div>`;
 
     $('story-intro').innerHTML = G.storyIntro.map((p) => `<p>${esc(p)}</p>`).join('');
     $('timeline').innerHTML = G.timeline.map((t) => `<div class="t-item"><span class="yr">${esc(t.year)}</span><div><p>${esc(t.text)}</p>${t.images ? `<div class="t-photos">${t.images.map((src, n) => `<figure><img src="${src}" alt="Goggins in the ${esc(t.year)}, photo ${n + 1}" loading="lazy"></figure>`).join('')}</div>` : ''}</div></div>`).join('');
