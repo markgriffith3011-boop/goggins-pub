@@ -72,7 +72,7 @@ window.GOGGINS = {
     ['Sat 5 Dec', 'First Saturday Back', 'Live music in the front bar.'],
     ['Thu 10 Dec', 'Christmas Quiz', 'Teams of up to six. Festive rounds.'],
     ['Sun 13 Dec', 'Christmas Trad Session', 'Musicians welcome, bring an instrument.'],
-    ['All month', 'Christmas Parties', 'Upstairs lounge (25–40) and private room (12–20).'],
+    ['All month', 'Christmas Parties', 'The upstairs lounge takes 25 to 40.'],
     ['Sat 26 Dec', "St Stephen's Day", 'Leopardstown Christmas racing on the big screen.'],
     ['Thu 31 Dec', "New Year's Eve", 'See the year out at the local.'],
   ],
@@ -88,7 +88,6 @@ window.GOGGINS = {
     { name: 'Front Bar', cap: 'Walk-ins', img: '/img/bar.jpg', text: 'Warm wood, classic snugs and daylight from Monkstown Road. The heart of the pub for a casual pint.' },
     { name: 'The Snug', cap: 'Up to 8', img: null, text: 'A quiet corner away from the main bar for a small group or a long chat.' },
     { name: 'Upstairs Lounge', cap: '25–40 people', img: null, text: 'Bright, flexible room for birthdays, Christmas parties, christenings and work drinks. Drinks packages on request. Food from January.' },
-    { name: 'Private Room', cap: '12–20 people', img: null, text: 'A more enclosed room upstairs for functions and family occasions.' },
   ],
 
   outstanding: [
