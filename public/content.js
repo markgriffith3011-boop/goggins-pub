@@ -3,7 +3,7 @@ window.GOGGINS = {
   address: ['99 Monkstown Road', 'Monkstown, Co. Dublin', 'A94 Y8D8'],
   email: 'info@gogginspub.com',
   phone: 'Phone number to confirm',
-  opening: { iso: '2026-12-01T00:00:00Z', label: 'Tuesday 1 December 2026', short: '1 December' },
+  opening: { iso: '2026-11-27T15:00:00Z', label: 'Friday 27 November 2026, 3pm', short: '27 November' },
 
   hours: [
     ['Monday', '15:00', '23:30'],
@@ -17,15 +17,15 @@ window.GOGGINS = {
 
   storyIntro: [
     'Goggins has been on Monkstown Road since 1957. It has been a family pub its entire life — passed down through generations, each putting their own mark on it while keeping the things that made it worth keeping.',
-    'After a difficult few years, it is reopening under new family management. The intention is to get back to what Goggins has always been — a good local pub for a great part of Dublin.',
+    'After a difficult few years, it reopened on 27 November 2026 under new family management. The intention is to get back to what Goggins has always been — a good local pub for a great part of Dublin.',
   ],
 
   timeline: [
     { year: '1957', text: "Goggins opened on Monkstown Road as a family-run local. From the start it was a straightforward place — good pints, familiar faces, and a welcome that didn't need to try too hard." },
     { year: '1960s – 80s', text: 'The bar expanded, the upstairs lounge was added, and Goggins settled into its role as a proper neighbourhood pub. It became the kind of place that hosted the big nights and the quiet ones equally well.', images: ['/img/archive-1.jpg', '/img/archive-2.jpg', '/img/archive-3.jpg'] },
     { year: 'Late 1990s', text: 'The pub passed to the next generation, who renovated and ran it through its busiest years. For a long stretch Goggins was well-known across South Dublin — a reliable spot with a good atmosphere and a loyal crowd.' },
-    { year: '2020 – 2024', text: 'Like much of the pub trade, Goggins struggled in the years after Covid. We closed our doors in April 2024 with the aim of reopening on 1st December 2026.' },
-    { year: 'Today', text: 'Goggins reopens on 1st December 2026 under new family management. The aim is simple: restore what made the pub worth coming to in the first place, and give Monkstown back its local.' },
+    { year: '2020 – 2024', text: 'Like much of the pub trade, Goggins struggled in the years after Covid. We closed our doors in April 2024.' },
+    { year: 'Today', text: 'Goggins reopened on Friday 27 November 2026 under new family management. The aim is simple: restore what made the pub worth coming to in the first place, and give Monkstown back its local.' },
   ],
 
   menu: [
@@ -68,7 +68,7 @@ window.GOGGINS = {
   ],
 
   december: [
-    ['Tue 1 Dec', 'Opening Night', 'Doors open on Monkstown Road for the first time in two years.'],
+    ['Fri 27 Nov', 'Opening Night', 'Doors open at 3pm on Monkstown Road for the first time since April 2024.'],
     ['Sat 5 Dec', 'First Saturday Back', 'Live music in the front bar.'],
     ['Thu 10 Dec', 'Christmas Quiz', 'Teams of up to six. Festive rounds.'],
     ['Sun 13 Dec', 'Christmas Trad Session', 'Musicians welcome, bring an instrument.'],
@@ -139,7 +139,10 @@ window.GG = (function () {
       });
     };
     tick();
-    setInterval(tick, 1000);
+    const timer = setInterval(() => {
+      tick();
+      if (Date.now() >= target) { clearInterval(timer); setMode('after'); }
+    }, 1000);
   }
 
   function todayHours() {
