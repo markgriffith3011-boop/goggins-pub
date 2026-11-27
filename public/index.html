@@ -286,7 +286,7 @@
           <div data-when="before">
             <p class="eyebrow" style="color:var(--gilt)">Est. 1957 · Monkstown, Co. Dublin</p>
             <h1 style="margin-top:14px">The lights are coming back on.</h1>
-            <p class="lede">Goggins reopens today, Friday 27 November, at 3pm.</p>
+            <p class="lede">Grand opening today at 3pm, after two years of being closed.</p>
             <div class="plate" data-countdown aria-label="Countdown to opening">
               <div><b data-cd="d">–</b><small>Days</small></div>
               <div><b data-cd="h">–</b><small>Hours</small></div>
@@ -301,7 +301,7 @@
           <div data-when="after" hidden>
             <p class="eyebrow" style="color:var(--gilt)" data-today></p>
             <h1 style="margin-top:14px">Your local on Monkstown Road since 1957.</h1>
-            <p class="lede">Pints, the match on and a seat by the window. Food is likely from January.</p>
+            <p class="lede" id="after-lede">Pints, the match on and a seat by the window. Food is likely from January.</p>
             <div class="btn-row">
               <a class="btn btn-gilt" href="#book">Book a table</a>
               <a class="btn btn-line" href="#whatson">What's on this week</a>
@@ -514,6 +514,11 @@
     $('visit').innerHTML = `<div><p class="eyebrow">Find us</p><h3 style="margin-top:10px">99 Monkstown Road</h3><address>${addr}</address><div class="btn-row" style="margin-top:18px"><a class="text-link" href="https://maps.google.com/?q=Goggins+99+Monkstown+Road+Monkstown+Co+Dublin" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
       <div><p class="eyebrow">Opening hours</p><h3 style="margin-top:10px">From 27 November</h3><table class="hours">${hours}</table></div>
       <div><p class="eyebrow">Contact</p><h3 style="margin-top:10px">Get in touch</h3><p style="color:var(--muted)">${esc(G.email)}</p><div class="btn-row" style="margin-top:18px"><a class="btn btn-ink" href="#book">Book or enquire</a></div></div>`;
+
+    // On opening day the open-version hero leads with the grand opening
+    if (new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Dublin' }).format(new Date()) === '2026-11-27') {
+      $('after-lede').textContent = 'Grand opening today, after two years of being closed. Come down for a pint.';
+    }
 
     GG.init();
   })();
