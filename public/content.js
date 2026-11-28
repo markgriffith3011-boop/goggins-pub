@@ -11,21 +11,30 @@ window.GOGGINS = {
     ['Wednesday', '15:00', '23:30'],
     ['Thursday', '15:00', '23:30'],
     ['Friday', '15:00', '00:30'],
-    ['Saturday', '11:00', '00:30'],
-    ['Sunday', '12:30', '23:00'],
+    ['Saturday', '12:00', '00:30'],
+    ['Sunday', '12:00', '00:30'],
   ],
 
   storyIntro: [
     'Goggins has been on Monkstown Road since 1957. It has been a family pub its entire life — passed down through generations, each putting their own mark on it while keeping the things that made it worth keeping.',
-    'After a difficult few years, it reopened on 27 November 2026 under new family management. The intention is to get back to what Goggins has always been — a good local pub for a great part of Dublin.',
+    'After a difficult few years and more than two years with the doors shut, Goggins reopened on Friday 27 November 2026 under new family management, with a new red front and a refurbished bar. The intention is to get back to what Goggins has always been: a good local pub for a great part of Dublin.',
   ],
 
   timeline: [
+    { year: 'Early 1900s', text: "The Goggin name on Monkstown Road goes back further than the pub. Old notices that hang in the bar today show Goggin and Co. trading from 99 Monkstown Road, and C.J. Goggin's family grocery and licensed premises nearby.", colour: true, images: [
+      { src: '/img/photos/story-plaques.jpg', alt: 'Framed notices in the bar: a sale notice for 99 Monkstown Road, trading as Goggin and Co., and an advertisement for C.J. Goggin, family grocer' },
+      { src: '/img/photos/story-crescent.jpg', alt: 'A print of The Crescent, Monkstown, around 1900' },
+    ] },
     { year: '1957', text: "Goggins opened on Monkstown Road as a family-run local. From the start it was a straightforward place — good pints, familiar faces, and a welcome that didn't need to try too hard." },
     { year: '1960s – 80s', text: 'The bar expanded, the upstairs lounge was added, and Goggins settled into its role as a proper neighbourhood pub. It became the kind of place that hosted the big nights and the quiet ones equally well.', images: ['/img/archive-1.jpg', '/img/archive-2.jpg', '/img/archive-3.jpg'] },
     { year: 'Late 1990s', text: 'The pub passed to the next generation, who renovated and ran it through its busiest years. For a long stretch Goggins was well-known across South Dublin — a reliable spot with a good atmosphere and a loyal crowd.' },
-    { year: '2020 – 2024', text: 'Like much of the pub trade, Goggins struggled in the years after Covid. We closed our doors in April 2024.' },
-    { year: 'Today', text: 'Goggins reopened on Friday 27 November 2026 under new family management. The aim is simple: restore what made the pub worth coming to in the first place, and give Monkstown back its local.' },
+    { year: '2020 – 2025', text: 'Like much of the pub trade, Goggins struggled in the years after Covid. We closed our doors in April 2024, and the navy front stayed dark through 2025 while we planned the reopening.', colour: true, images: [
+      { src: '/img/photos/front-2025.jpg', alt: 'The Goggins front in 2025, painted navy, while the pub was closed' },
+    ] },
+    { year: 'Today', text: 'Goggins reopened on Friday 27 November 2026 under new family management. The navy front is now Goggins red, the bar has been refurbished, and the lights are back on along Monkstown Road. The aim is simple: restore what made the pub worth coming to in the first place, and give Monkstown back its local.', colour: true, images: [
+      { src: '/img/photos/front-2026.jpg', alt: 'The Goggins front in 2026, painted red and lit up at night' },
+      { src: '/img/photos/space-snug.jpg', alt: 'Seating under the balcony, with old whiskey signs on the walls' },
+    ] },
   ],
 
   menu: [
@@ -59,36 +68,25 @@ window.GOGGINS = {
 
   weekly: [
     ['Monday', 'Quiet Monday', 'The easy start to the week. Fire on, papers out.', 'From 5pm'],
-    ['Tuesday', 'Kitchen Specials', 'A changing special from the kitchen, once food starts.', ''],
-    ['Wednesday', 'Wine & Dine', 'Bottle of house wine with two mains, once food starts.', 'From 5pm'],
-    ['Thursday', 'Quiz Night', 'Teams of up to six. Book a table, it fills up.', '8.30pm'],
     ['Friday', 'After Work', 'Doors open at 3pm and a full bar by six.', 'From 3pm'],
-    ['Saturday', 'Live Music', 'Local acts, from folk to covers.', 'From 9pm'],
-    ['Sunday', 'Trad & Sport', 'Trad session in the afternoon, the match after.', '3pm · 6pm'],
+    ['Saturday', 'Live Music', 'Local acts, from folk to covers.', 'From 10pm'],
+    ['Sunday', 'Sunday Sport', 'The match on every screen. Sunday roasts are coming in the new year.', 'From 12pm'],
   ],
 
   december: [
-    ['Fri 27 Nov', 'Opening Night', 'Doors open at 3pm on Monkstown Road for the first time since April 2024.'],
-    ['Sat 5 Dec', 'First Saturday Back', 'Live music in the front bar.'],
-    ['Thu 10 Dec', 'Christmas Quiz', 'Teams of up to six. Festive rounds.'],
-    ['Sun 13 Dec', 'Christmas Trad Session', 'Musicians welcome, bring an instrument.'],
+    ['Sat 5 Dec', 'Live Music', 'In the back bar from 10pm.'],
     ['All month', 'Christmas Parties', 'The upstairs lounge takes 25 to 40.'],
-    ['Sat 26 Dec', "St Stephen's Day", 'Leopardstown Christmas racing on the big screen.'],
+    ['Sat 26 Dec', "St Stephen's Day", 'Leopardstown Christmas racing on every screen.'],
     ['Thu 31 Dec', "New Year's Eve", 'See the year out at the local.'],
   ],
 
   sports: [
-    ['Premier League', 'Weekend fixtures', 'Every screen'],
-    ['Champions Cup Rugby', 'Leinster & Munster December rounds', 'Front bar'],
-    ['Leopardstown Christmas Festival', '26–29 December', 'Front bar'],
-    ['GAA & Six Nations', 'From the new year', 'Every screen'],
+    ['Weekends', 'Premier League', 'The weekend fixtures on every screen.'],
+    ['December', 'Champions Cup Rugby', 'Leinster and Munster, on every screen.'],
+    ['26–29 Dec', 'Leopardstown Christmas Festival', 'The racing on every screen.'],
+    ['New year', 'GAA & Six Nations', 'On every screen.'],
   ],
 
-  spaces: [
-    { name: 'Front Bar', cap: 'Walk-ins', img: '/img/bar.jpg', text: 'Warm wood, classic snugs and daylight from Monkstown Road. The heart of the pub for a casual pint.' },
-    { name: 'The Snug', cap: 'Up to 8', img: null, text: 'A quiet corner away from the main bar for a small group or a long chat.' },
-    { name: 'Upstairs Lounge', cap: '25–40 people', img: null, text: 'Bright, flexible room for birthdays, Christmas parties, christenings and work drinks. Drinks packages on request. Food is likely from January.' },
-  ],
 
   outstanding: [
     'Logo files (chosen concept, outlined vector)',

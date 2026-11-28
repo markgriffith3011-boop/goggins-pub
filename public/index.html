@@ -1,12 +1,12 @@
 <!doctype html><html lang="en-IE"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <link rel="icon" href="/img/mark-gold.png">
 <title>Goggins of Monkstown · A great local since 1957</title>
-<meta name="description" content="Goggins of Monkstown, the family pub on Monkstown Road since 1957. Open again from 27 November 2026. Pints, sport, live music, quiz night and Christmas parties upstairs.">
+<meta name="description" content="Goggins of Monkstown, the family pub on Monkstown Road since 1957. Back open on Monkstown Road. Pints, sport on every screen, live music on Saturdays and Christmas parties upstairs.">
 <meta property="og:title" content="Goggins of Monkstown">
-<meta property="og:description" content="A great local since 1957. Open again on Monkstown Road from 27 November 2026.">
-<meta property="og:image" content="https://gogginspub.com/img/storefront.jpg">
+<meta property="og:description" content="A great local since 1957. Back open on Monkstown Road.">
+<meta property="og:image" content="https://gogginspub.com/img/photos/og.jpg">
 <meta property="og:url" content="https://gogginspub.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarOrPub","name":"Goggins of Monkstown","url":"https://gogginspub.com","email":"info@gogginspub.com","foundingDate":"1957","image":"https://gogginspub.com/img/storefront.jpg","sameAs":["https://www.instagram.com/gogginspub"],"address":{"@type":"PostalAddress","streetAddress":"99 Monkstown Road","addressLocality":"Monkstown","addressRegion":"Co. Dublin","postalCode":"A94 Y8D8","addressCountry":"IE"},"geo":{"@type":"GeoCoordinates","latitude":53.2931,"longitude":-6.1536},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"15:00","closes":"23:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"15:00","closes":"00:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"11:00","closes":"00:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"12:30","closes":"23:00"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BarOrPub","name":"Goggins of Monkstown","url":"https://gogginspub.com","email":"info@gogginspub.com","foundingDate":"1957","image":"https://gogginspub.com/img/photos/hero.jpg","sameAs":["https://www.instagram.com/gogginspub"],"address":{"@type":"PostalAddress","streetAddress":"99 Monkstown Road","addressLocality":"Monkstown","addressRegion":"Co. Dublin","postalCode":"A94 Y8D8","addressCountry":"IE"},"geo":{"@type":"GeoCoordinates","latitude":53.2931,"longitude":-6.1536},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"15:00","closes":"23:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"15:00","closes":"00:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"12:00","closes":"00:30"}]}</script>
 <link rel="canonical" href="https://gogginspub.com/">
 <meta name="theme-color" content="#8A1C2B">
 <link rel="apple-touch-icon" href="/img/mark-gold.png">
@@ -67,11 +67,16 @@
   .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
   /* Hero */
-  .hero { position: relative; color: #F5EFE3; background: var(--wine-deep); }
-  .hero img { width: 100%; height: clamp(420px, 62vw, 640px); object-fit: cover; object-position: center 35%; filter: saturate(.85); }
-  .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(52,8,16,.25) 0%, rgba(52,8,16,.55) 35%, rgba(60,10,18,.93) 100%); }
-  .hero-copy { position: absolute; inset: auto 0 0 0; z-index: 2; padding-block: 40px; }
-  .hero h1 { font-size: clamp(40px, 6.4vw, 76px); max-width: 14ch; }
+  .hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); color: #F5EFE3; background: var(--chevron) var(--wine-deep); border-bottom: 3px solid var(--gilt); }
+  .hero img { grid-column: 2; grid-row: 1; width: 100%; height: clamp(500px, 46vw, 660px); object-fit: cover; object-position: 22% 50%; border-left: 3px solid var(--gilt); }
+  .hero-copy { grid-column: 1; grid-row: 1; align-self: center; padding: 48px 40px 48px max(20px, calc((100vw - var(--wrap)) / 2 + 20px)); }
+  .hero-copy .wrap { max-width: none; margin: 0; padding: 0; }
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero img { grid-column: 1; height: 62vw; min-height: 240px; max-height: 460px; border-left: 0; border-bottom: 3px solid var(--gilt); object-position: 30% 50%; }
+    .hero-copy { grid-column: 1; grid-row: 2; padding: 32px 20px 40px; }
+  }
+  .hero h1 { font-size: clamp(38px, 4vw, 58px); max-width: 15ch; }
   .hero .lede { margin-top: 14px; font-size: 18px; max-width: 46ch; color: #E6DDCB; }
   .plate { display: inline-flex; flex-wrap: wrap; gap: 0; margin-top: 26px; border: 1.5px solid var(--gilt); background: rgba(106,20,33,.78); }
   .plate div { padding: 12px 18px; text-align: center; min-width: 78px; }
@@ -91,7 +96,7 @@
   .intro p + p, .intro p + .btn-row { margin-top: 16px; }
   .text-link { font: 600 13px/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--wine); text-decoration: none; border-bottom: 1.5px solid var(--gilt); padding-bottom: 4px; }
 
-  .thennow { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 36px; }
+  .thennow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
   .thennow figure { margin: 0; background: #fff; padding: 10px 10px 14px; box-shadow: 0 1px 0 var(--rule), 0 12px 30px -18px rgba(74,20,28,.45); }
   .thennow figure:first-child { transform: rotate(-1.2deg); }
   .thennow figure:last-child { transform: rotate(.8deg); }
@@ -148,6 +153,16 @@
   .page-head p.sub { margin-top: 14px; color: #D6CEBE; max-width: 56ch; }
   .page-head.photo { padding: 0; }
   .page-head.photo img { width: 100%; height: clamp(300px, 40vw, 440px); object-fit: cover; filter: grayscale(1) contrast(1.05) brightness(.7); }
+  .page-head.photo.colour img { filter: brightness(.5) saturate(.9); }
+  .inside { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+  .inside.three { grid-template-columns: repeat(3, 1fr); margin-top: 0; }
+  .inside figure { margin: 0; overflow: hidden; background: var(--wine-deep); }
+  .inside img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; transition: transform .6s ease; }
+  .inside figure:hover img { transform: scale(1.03); }
+  .photo-strip-band { padding-bottom: 0; }
+  .t-photos.colour img { filter: none; }
+  .t-photos.colour figure:first-child { grid-column: auto; }
+  .t-photos.colour figure:only-child { grid-column: 1 / -1; }
   .page-head.photo .wrap { position: absolute; inset: auto 0 0 0; padding-block: 36px; }
 
   /* Story timeline */
@@ -239,6 +254,9 @@
     .news form { grid-template-columns: 1fr; gap: 10px; }
     .news input { border-right: 1.5px solid var(--gilt); }
     .thennow { grid-template-columns: 1fr; }
+    .inside { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .inside.three figure:last-child { display: none; }
+    .inside.three { grid-template-columns: 1fr 1fr; }
     .notice li { grid-template-columns: 1fr; gap: 4px; }
     .timeline::before { left: 6px; }
     .t-item { grid-template-columns: 1fr; gap: 4px; padding-left: 30px; }
@@ -270,7 +288,6 @@
       <li><a href="#story" data-nav="story">Our Story</a></li>
       <li><a href="#menu" data-nav="menu">Menu</a></li>
       <li><a href="#whatson" data-nav="whatson">What's On</a></li>
-      <li><a href="#spaces" data-nav="spaces">Spaces</a></li>
       <li><a href="#book" data-nav="book">Book</a></li>
     </ul>
   </nav>
@@ -280,7 +297,7 @@
   <!-- HOME -->
   <div data-page="home">
     <section class="hero">
-      <img src="/img/storefront.jpg" alt="The Goggins shopfront on Monkstown Road, navy fascia with gold lettering">
+      <img src="/img/photos/hero.jpg" alt="Goggins at night on Monkstown Road: the new red front, gold lettering and stars in the windows" fetchpriority="high">
       <div class="hero-copy">
         <div class="wrap">
           <div data-when="before">
@@ -295,7 +312,7 @@
             </div>
             <div class="btn-row">
               <a class="btn btn-gilt" href="#book">Register interest</a>
-              <a class="btn btn-line" href="#spaces">Christmas parties</a>
+              <a class="btn btn-line" href="#book">Christmas parties</a>
             </div>
           </div>
           <div data-when="after" hidden>
@@ -308,6 +325,16 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="band paper-2">
+      <div class="wrap">
+        <div class="head-row">
+          <div><p class="eyebrow">Every week</p><h2>The week at Goggins</h2></div>
+          <a class="text-link" href="#whatson">Full programme</a>
+        </div>
+        <ul class="notice" id="home-week"></ul>
       </div>
     </section>
 
@@ -337,37 +364,40 @@
       </div>
       <div class="wrap thennow">
         <figure class="archive"><img src="/img/archive-1.jpg" alt="Goggins Inn, lounge bar and off-licence in the 1980s"><figcaption>Goggins Inn <span>1980s</span></figcaption></figure>
-        <figure><img src="/img/storefront.jpg" alt="Goggins shopfront today"><figcaption>Goggins <span>2026</span></figcaption></figure>
+        <figure><img src="/img/photos/front-2025.jpg" alt="The Goggins front in 2025, painted navy, while the pub was closed" loading="lazy"><figcaption>Closed <span>2025</span></figcaption></figure>
+        <figure><img src="/img/photos/front-2026.jpg" alt="The Goggins front in 2026, painted red and lit up at night" loading="lazy"><figcaption>Back open <span>2026</span></figcaption></figure>
       </div>
     </section>
 
-    <section class="band paper-2">
+    <section class="band inside-band">
       <div class="wrap">
-        <div class="head-row">
-          <div><p class="eyebrow">Every week</p><h2>The week at Goggins</h2></div>
-          <a class="text-link" href="#whatson">Full programme</a>
+        <div class="head-row"><div><p class="eyebrow">Inside</p><h2>A great local since 1957</h2></div><a class="text-link" href="#story">Read our story</a></div>
+        <div class="inside">
+          <figure><img src="/img/photos/inside-sign.jpg" alt="The gold Goggins of Monkstown sign behind the bar" loading="lazy"></figure>
+          <figure><img src="/img/photos/menu-pints.jpg" alt="A freshly poured pint of Guinness on the bar, with the lit back bar behind" loading="lazy"></figure>
+          <figure><img src="/img/photos/inside-lamp.jpg" alt="A table lamp and the Goggins drinks menu in a quiet corner" loading="lazy"></figure>
+          <figure><img src="/img/photos/inside-signs.jpg" alt="Old Irish whiskey and ale signs on the wall" loading="lazy"></figure>
         </div>
-        <ul class="notice" id="home-week"></ul>
       </div>
     </section>
 
     <section class="band on-wine">
       <div class="wrap xmas">
         <div>
-          <div class="head-row" style="margin-bottom:24px"><div><p class="eyebrow">We open into Christmas</p><h2>December at Goggins</h2></div></div>
+          <div class="head-row" style="margin-bottom:24px"><div><p class="eyebrow">This December</p><h2>December at Goggins</h2></div></div>
           <ul class="notice" id="home-dec"></ul>
         </div>
         <div>
           <div class="card-gilt">
             <p class="eyebrow">Christmas parties</p>
             <h3 style="margin-top:12px">Upstairs is taking bookings</h3>
-            <p>The lounge takes 25 to 40. Drinks packages available. Food is likely from January.</p>
-            <div class="btn-row"><a class="btn btn-gilt" href="#spaces">See the rooms</a></div>
+            <p>The upstairs lounge takes 25 to 40. Food is likely from January.</p>
+            <div class="btn-row"><a class="btn btn-gilt" href="#book">Enquire</a></div>
           </div>
           <div class="card-gilt">
-            <p class="eyebrow">Opening night</p>
-            <h3 style="margin-top:12px">Friday 27 November, from 3pm</h3>
-            <p>The doors are open again on Monkstown Road. Come down for a pint and see the place.</p>
+            <p class="eyebrow">Every weekend</p>
+            <h3 style="margin-top:12px">Live music and the match</h3>
+            <p>Live music from 10pm on Saturdays, and sport on every screen all weekend. Come down for a pint.</p>
             <div class="btn-row"><a class="btn btn-line" href="#whatson">What's on</a></div>
           </div>
         </div>
@@ -403,25 +433,23 @@
 
   <!-- MENU -->
   <div data-page="menu" hidden>
-    <section class="page-head"><div class="wrap"><p class="eyebrow">Food & drink</p><h1>The menu</h1><p class="sub">The bar is open from Friday 27 November. Food will likely not be served until January.</p></div></section>
-    <section class="band"><div class="wrap menu-grid" id="menu"></div></section>
+    <section class="page-head"><div class="wrap"><p class="eyebrow">Food & drink</p><h1>The menu</h1><p class="sub">The bar is open now. Food will likely not be served until January.</p></div></section>
+    <section class="band photo-strip-band"><div class="wrap inside three">
+      <figure><img src="/img/photos/menu-pour.jpg" alt="A pint being pulled at the tap" loading="lazy"></figure>
+      <figure><img src="/img/photos/menu-pints.jpg" alt="A freshly poured pint of Guinness on the bar, with the lit back bar behind" loading="lazy"></figure>
+      <figure><img src="/img/photos/menu-gin.jpg" alt="Irish gins lit up on the back bar" loading="lazy"></figure>
+    </div></section>
+    <section class="band"><div class="wrap menu-grid" id="menu-list"></div></section>
   </div>
 
   <!-- WHAT'S ON -->
   <div data-page="whatson" hidden>
-    <section class="page-head"><div class="wrap"><p class="eyebrow">Music, quiz & sport</p><h1>What's on</h1><p class="sub">Sample programme. Final nights to be confirmed before opening.</p></div></section>
-    <section class="band"><div class="wrap"><div class="head-row"><div><p class="eyebrow">Opening weeks</p><h2>November &amp; December</h2></div></div><ul class="notice" id="wo-dec"></ul></div></section>
-    <section class="band paper-2"><div class="wrap"><div class="head-row"><div><p class="eyebrow">Every week</p><h2>The weekly programme</h2></div></div><div class="spaces-note"><p class="eyebrow">Please note</p><p>Food will likely not be served until January, so Kitchen Specials and Wine &amp; Dine start then. The bar is open from 27 November.</p></div><ul class="notice" id="wo-week"></ul></div></section>
-    <section class="band on-wine"><div class="wrap"><div class="head-row"><div><p class="eyebrow">On the big screen</p><h2>Sport at Goggins</h2></div></div><ul class="notice" id="wo-sport"></ul></div></section>
+    <section class="page-head photo colour"><img src="/img/photos/whatson-head.jpg" alt="A full room watching the match on the big screen"><div class="wrap"><p class="eyebrow">Music & sport</p><h1>What's on</h1><p class="sub">Live music on Saturdays, sport on every screen, and what's coming up this December.</p></div></section>
+    <section class="band"><div class="wrap"><div class="head-row"><div><p class="eyebrow">This December</p><h2>December at Goggins</h2></div></div><ul class="notice" id="wo-dec"></ul></div></section>
+    <section class="band paper-2"><div class="wrap"><div class="head-row"><div><p class="eyebrow">Every week</p><h2>The weekly programme</h2></div></div><div class="spaces-note"><p class="eyebrow">Please note</p><p>Food will likely not be served until January. Sunday roasts start in the new year.</p></div><ul class="notice" id="wo-week"></ul></div></section>
+    <section class="band on-wine"><div class="wrap"><div class="head-row"><div><p class="eyebrow">On every screen</p><h2>Sport at Goggins</h2></div></div><ul class="notice" id="wo-sport"></ul></div></section>
   </div>
 
-  <!-- SPACES -->
-  <div data-page="spaces" hidden>
-    <section class="page-head"><div class="wrap"><p class="eyebrow">Private hire</p><h1>Rooms & spaces</h1><p class="sub">From a table in the front bar to the whole lounge upstairs. Christmas dates are open now.</p></div></section>
-    <section class="band"><div class="wrap">
-      <div class="spaces-note"><p class="eyebrow">Coming soon</p><p>We've just refurbished, and new photos and a brochure for our rooms are on the way. Want to see a room before you book? Email <a href="mailto:info@gogginspub.com">info@gogginspub.com</a> and we'll arrange a viewing.</p></div>
-      <div id="spaces"></div></div></section>
-  </div>
 
   <!-- BOOK -->
   <div data-page="book" hidden>
@@ -474,14 +502,13 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <div><div class="logo" id="logo-foot"></div><p style="margin-top:16px;max-width:34ch">A family pub on Monkstown Road since 1957. Open again from 27 November 2026.</p></div>
+      <div><div class="logo" id="logo-foot"></div><p style="margin-top:16px;max-width:34ch">A family pub on Monkstown Road since 1957. Back open since 27 November 2026.</p></div>
       <div><h4>Visit</h4><address id="foot-address"></address><p style="margin-top:12px" id="foot-email"></p></div>
       <div><h4>Opening hours</h4><table class="hours" id="foot-hours"></table></div>
     </div>
     <div class="foot-base"><span>© 2026 Goggins of Monkstown</span><span>99 Monkstown Road, Monkstown, Co. Dublin · <a href="https://www.instagram.com/gogginspub" target="_blank" rel="noopener">Instagram</a></span></div>
   </div>
 </footer>
-
 
 <script src="/content.js"></script>
 <script>
@@ -493,26 +520,25 @@
 
     const notice = (rows) => rows.map((r) => `<li><span class="day">${esc(r[0])}</span><div><h3>${esc(r[1])}</h3><p>${esc(r[2])}</p></div><span class="when">${esc(r[3] || '')}</span></li>`).join('');
     $('home-intro').textContent = G.storyIntro[0];
-    $('home-week').innerHTML = notice(G.weekly.filter((w) => ['Thursday', 'Saturday', 'Sunday'].includes(w[0])));
+    $('home-week').innerHTML = notice(G.weekly);
     $('home-dec').innerHTML = notice(G.december.slice(0, 5).map((d) => [d[0], d[1], d[2], '']));
     $('wo-week').innerHTML = notice(G.weekly);
     $('wo-dec').innerHTML = notice(G.december.map((d) => [d[0], d[1], d[2], '']));
-    $('wo-sport').innerHTML = notice(G.sports.map((s) => ['Sample', s[0], s[1], s[2]]));
+    $('wo-sport').innerHTML = notice(G.sports.map((s) => [s[0], s[1], s[2], '']));
 
     const item = (i) => `<li><div class="line"><h3>${esc(i[0])}</h3><span class="dots"></span><b>${esc(i[2])}</b></div><p>${esc(i[1])}</p></li>`;
-        $('menu').innerHTML = `<div style="grid-column:1/-1;text-align:center;max-width:52ch;margin:0 auto;padding:24px 0"><h2 style="font-size:clamp(28px,3.4vw,38px)">Food is on the way</h2><p style="margin-top:14px;opacity:.85">Food will likely not be served until January. The bar is open from 27 November with a full range of drinks. Join the mailing list and we'll send you the food menu first.</p><div style="margin-top:24px;display:flex;justify-content:center"><a class="btn btn-ink" href="#home">Join the mailing list</a></div></div>`;
+        $('menu-list').innerHTML = `<div style="grid-column:1/-1;text-align:center;max-width:52ch;margin:0 auto;padding:24px 0"><h2 style="font-size:clamp(28px,3.4vw,38px)">Food is on the way</h2><p style="margin-top:14px;opacity:.85">Food will likely not be served until January. The bar is open now with a full range of drinks. Join the mailing list and we'll send you the food menu first.</p><div style="margin-top:24px;display:flex;justify-content:center"><a class="btn btn-ink" href="#home">Join the mailing list</a></div></div>`;
 
     $('story-intro').innerHTML = G.storyIntro.map((p) => `<p>${esc(p)}</p>`).join('');
-    $('timeline').innerHTML = G.timeline.map((t) => `<div class="t-item"><span class="yr">${esc(t.year)}</span><div><p>${esc(t.text)}</p>${t.images ? `<div class="t-photos">${t.images.map((src, n) => `<figure><img src="${src}" alt="Goggins in the ${esc(t.year)}, photo ${n + 1}" loading="lazy"></figure>`).join('')}</div>` : ''}</div></div>`).join('');
+    $('timeline').innerHTML = G.timeline.map((t) => `<div class="t-item"><span class="yr">${esc(t.year)}</span><div><p>${esc(t.text)}</p>${t.images ? `<div class="t-photos${t.colour ? ' colour' : ''}">${t.images.map((im, n) => `<figure><img src="${typeof im === 'string' ? im : im.src}" alt="${esc(typeof im === 'string' ? `Goggins in the ${t.year}, photo ${n + 1}` : im.alt)}" loading="lazy"></figure>`).join('')}</div>` : ''}</div></div>`).join('');
 
-    $('spaces').innerHTML = G.spaces.map((s) => `<article class="space"><div class="space-img">${s.img ? `<img src="${s.img}" alt="${esc(s.name)}" loading="lazy">` : `<div class="ph">New photos<br>coming soon</div>`}</div><div class="space-body"><p class="eyebrow">${esc(s.cap)}</p><h2>${esc(s.name)}</h2><p>${esc(s.text)}</p><div class="btn-row"><a class="btn btn-ink" href="#book">Enquire</a></div></div></article>`).join('');
 
     const addr = G.address.map(esc).join('<br>');
     const hours = G.hours.map((h) => `<tr><td>${h[0]}</td><td>${h[1]} – ${h[2]}</td></tr>`).join('');
     $('foot-address').innerHTML = addr; $('foot-email').textContent = G.email; $('foot-hours').innerHTML = hours;
     $('book-address').innerHTML = addr; $('book-email').textContent = G.email;
     $('visit').innerHTML = `<div><p class="eyebrow">Find us</p><h3 style="margin-top:10px">99 Monkstown Road</h3><address>${addr}</address><div class="btn-row" style="margin-top:18px"><a class="text-link" href="https://maps.google.com/?q=Goggins+99+Monkstown+Road+Monkstown+Co+Dublin" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
-      <div><p class="eyebrow">Opening hours</p><h3 style="margin-top:10px">From 27 November</h3><table class="hours">${hours}</table></div>
+      <div><p class="eyebrow">Opening hours</p><h3 style="margin-top:10px">Every week</h3><table class="hours">${hours}</table></div>
       <div><p class="eyebrow">Contact</p><h3 style="margin-top:10px">Get in touch</h3><p style="color:var(--muted)">${esc(G.email)}</p><div class="btn-row" style="margin-top:18px"><a class="btn btn-ink" href="#book">Book or enquire</a></div></div>`;
 
     // On opening day the open-version hero leads with the grand opening
