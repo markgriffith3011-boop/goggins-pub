@@ -113,6 +113,16 @@ window.GG = (function () {
     pages.forEach((p) => (p.hidden = p.dataset.page !== id));
     document.querySelectorAll('[data-nav]').forEach((a) => a.classList.toggle('is-active', a.dataset.nav === id));
     document.body.dataset.current = id;
+    trackPage(id);
+  }
+
+  // Each section counts as its own page in Vercel Analytics (/, /story, /menu, /whatson, /book).
+  let trackedPage = null;
+  function trackPage(id) {
+    if (id === trackedPage || typeof window.va !== 'function') return;
+    trackedPage = id;
+    const path = id === 'home' ? '/' : '/' + id;
+    window.va('pageview', { route: path, path });
   }
 
   function setMode(mode) {
